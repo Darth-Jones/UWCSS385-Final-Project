@@ -36,6 +36,15 @@ public class moveScript : MonoBehaviour
             {
                 rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x - (transform.up.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y - (transform.up.y * mHeroSpeed)));
             }
+        if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed,rb2d.velocity.x - (Vector3.right.x * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y - (transform.right.y * mHeroSpeed))));
+            }
+        else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x + (Vector3.right.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y + (Vector3.right.y * mHeroSpeed)));
+            }
+
         if (rb2d.velocity.x < -maxSpeed) {
             rb2d.velocity = new Vector2( - maxSpeed, rb2d.velocity.y);
         }
