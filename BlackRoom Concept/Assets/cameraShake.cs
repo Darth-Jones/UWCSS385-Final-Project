@@ -24,6 +24,9 @@ public class cameraShake : MonoBehaviour
     public GameObject darkUI;
     private RawImage image;
     public Color c;
+    public int startMaze = 1;
+    public int endMaze = 52;
+    private bool shook = false;
     // Start is called before the first frame update
 
 
@@ -44,7 +47,7 @@ public class cameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cameraOrigPos.x > 5) { shake = false;}
+        if (cameraOrigPos.x > startMaze + 10) { shake = false;}
         cameraOrigPos = cameraScript.expectedPos;
         frameCounter++;
         if(shake) {
@@ -56,26 +59,36 @@ public class cameraShake : MonoBehaviour
         }
         if (frameCounter < endShake && startShake < frameCounter) {
             i++;
-            c.a = c.a + .005f;
+            if (c.a < 1) {c.a = c.a + .005f;}
             image.color =  c;
             cameraScript.rubberBandNess = 1.5f;
-            if ( i < 60) {
-                float xMovement = Random.Range(-shakeSize * i/60, shakeSize * i/60);
-                float yMovement = Random.Range(-shakeSize * i/60, shakeSize * i/60);
-                cameraObject.transform.position = cameraOrigPos + new Vector3(xMovement, yMovement, -10);
-            }
-            else if ( i > 60 && i < shakeLength * 60 + 60) {
-                float xMovement = Random.Range(-shakeSize, shakeSize);
-                float yMovement = Random.Range(-shakeSize, shakeSize);
-                cameraObject.transform.position = cameraOrigPos + new Vector3(xMovement, yMovement, -10);
-            }
-            else {
-                float xMovement = Random.Range(-shakeSize * j/60, shakeSize * j/60);
-                float yMovement = Random.Range(-shakeSize * j/60, shakeSize * j/60);
-                cameraObject.transform.position = cameraOrigPos + new Vector3(xMovement, yMovement, -10);
-                j--;
+            if (!shook) {
+                if ( i < 60) {
+                    
+                    float xMovement = Random.Range(-shakeSize * i/60, shakeSize * i/60);
+                    float yMovement = Random.Range(-shakeSize * i/60, shakeSize * i/60);
+                    cameraObject.transform.position = cameraOrigPos + new Vector3(xMovement, yMovement, -10);
+                }
+                else if ( i > 60 && i < shakeLength * 60 + 60) {
+                    float xMovement = Random.Range(-shakeSize, shakeSize);
+                    float yMovement = Random.Range(-shakeSize, shakeSize);
+                    cameraObject.transform.position = cameraOrigPos + new Vector3(xMovement, yMovement, -10);
+                }
+                else {
+                    float xMovement = Random.Range(-shakeSize * j/60, shakeSize * j/60);
+                    float yMovement = Random.Range(-shakeSize * j/60, shakeSize * j/60);
+                    cameraObject.transform.position = cameraOrigPos + new Vector3(xMovement, yMovement, -10);
+                    j--;
+                    
+                }
+                if (frameCounter == endShake - 1) shook = true;
             }
             
+        }
+        if (cameraOrigPos.x < startMaze || cameraOrigPos.x > endMaze) {
+            shake = true;
+            if (c.a > 0) { c.a -= .005f; }
+            image.color = c;
         }
         Debug.Log("StartShake = " + startShake + " EndShake = " + endShake + " frameCounter = " + frameCounter + " i = " + i + " j = " + j);
         
