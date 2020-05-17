@@ -47,7 +47,6 @@ public class MatchSceneControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("input 1 = " + input1.text);
         if (input1.text == "13" && input2.text == "17"
             && input3.text == "16" && input4.text == "9"
             && input5.text == "26" && input6.text == "15"

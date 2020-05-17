@@ -147,7 +147,6 @@ public class CableScript : MonoBehaviour
                 if ((midTilePort1Taken == false) && (midTilePort2Taken == false)
                     && (midTilePort3Taken == false))
                 {
-                    Debug.Log("Something");
                     transform.position = new Vector2(midTilePosition.position.x - 2.5f, midTilePosition.position.y - 4);
                     endPos = new Vector2(midTilePosition.position.x - 2.5f, midTilePosition.position.y - 4);
                     lineRenderer.SetPosition(1, endPos);
