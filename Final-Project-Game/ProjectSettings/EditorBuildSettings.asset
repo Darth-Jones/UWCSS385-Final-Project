@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FlightScene.unity
+    path: Assets/Scenes/Email_System_Test_Scene.unity
     guid: a4a7836279e4ca145ba6ea4fb92cc4d5
   m_configObjects: {}
