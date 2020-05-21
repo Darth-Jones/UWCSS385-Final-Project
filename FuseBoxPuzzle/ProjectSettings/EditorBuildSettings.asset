@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FuseBoxDonna.unity
     guid: 5342fc316335c4a7fa17568760cba858
-  - enabled: 1
-    path: Assets/Scenes/KeypadTerry.unity
-    guid: 65c39bf384ce84920a96194004fc65a5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KeypadDonna.unity
     guid: 6847b3a9f433d416ba6a8312d4659506
+  - enabled: 0
+    path: Assets/Scenes/FuseBoxImageDonna.unity
+    guid: bfa1255f9e5d54d50937eee8876476cc
   - enabled: 1
     path: Assets/Scenes/FuseBoxTerry.unity
     guid: 3108021ac50534cd6987c68557acdc10
   - enabled: 1
+    path: Assets/Scenes/KeypadTerry.unity
+    guid: 65c39bf384ce84920a96194004fc65a5
+  - enabled: 1
     path: Assets/Scenes/FuseBoxImageTerry.unity
     guid: 4b664993f34334c09b442813453f92a6
-  - enabled: 1
-    path: Assets/Scenes/FuseBoxImageDonna.unity
-    guid: bfa1255f9e5d54d50937eee8876476cc
   m_configObjects: {}
