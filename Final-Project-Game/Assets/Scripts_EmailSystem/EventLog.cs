@@ -10,12 +10,19 @@ public class EventLog : MonoBehaviour
 
     //public bool readchedA = false;
 
-    public Stack checkPointText;
+    public LinkedList<string> checkPointText;
     private Dictionary<int, Event> eventList;
 
     public GameObject flashingText;
+
+    public GameObject UICanvas;
+    public GameObject emailControlList;
+
+
     public GameObject emailCanvas;
     public GameObject bodyCanvas;
+    public GameObject checkPointCanvas;
+
     private bool showEmailCanvas;
 
 
@@ -25,9 +32,11 @@ public class EventLog : MonoBehaviour
     void Start()
     {
         showEmailCanvas = false;
-        checkPointText = new Stack();
-        checkPointText.Push("");
+        checkPointText = new LinkedList<string>();
+        checkPointText.AddFirst("");
         eventList = new Dictionary<int, Event>();
+
+        a = Application.dataPath;
 
     }
 
@@ -39,8 +48,8 @@ public class EventLog : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             showEmailCanvas = !showEmailCanvas;
-            emailCanvas.SetActive(showEmailCanvas);
-            bodyCanvas.SetActive(showEmailCanvas);        
+            UICanvas.SetActive(showEmailCanvas);
+        //    bodyCanvas.SetActive(showEmailCanvas);        
         }
     }
 
@@ -49,24 +58,52 @@ public class EventLog : MonoBehaviour
         GUI.Label(new Rect(5, 0, 1000, 50), a);
     }
 
-    public void newText(string text, int ID)
+    public void newHintText(string text)
     {
-        Debug.Log("ID: " + currentID + " questID: " + ID);
-        if (ID > currentID)
-        {
+        checkPointText.AddFirst(text);
+        checkPointCanvas.GetComponent<CheckPointCanvasController>().newText(text);
             a = text;
-            currentID = ID;
-        }
+       
     }
 
-    public void newEvent(int eventID)
+    // Creates a new event based on the given eventID
+    public void CreateEvent(int eventID)
     {
         eventList.Add(eventID, new Event(eventID));
     }
 
-    public bool eventCompleted(int eventID)
+    public void CreateEmail(int emailID)
     {
-        return eventList[eventID].eventCompleted();
+        emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID);
+    }
+    public void CreateEmail(int emailID, string headerText, string bodyText)
+    {
+        emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID, headerText, bodyText);
+    }
+    public void CreateEmail(int emailID, string headerText, string bodyText, string hintText)
+    {
+        emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID, headerText, bodyText, hintText);
+    }
+
+    public bool stepCompleted(int eventID, int stepID)
+    {
+        string flash = eventList[eventID].stepCompleted(stepID);
+        if (flash != "")
+        {
+            FlashText(flash);
+            newHintText(flash);
+        }
+        return eventList[eventID].isComplete();
+    }
+    // checks if all steps in the event are completed
+    public bool isComplete(int eventID)
+    {
+        return eventList[eventID].isComplete();
+    }
+
+    public void FlashText(string flashText)
+    {
+        flashingText.GetComponent<TextFlashScript>().Flash(flashText);
     }
     
 }
