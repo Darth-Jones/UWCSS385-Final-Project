@@ -59,7 +59,7 @@ public class TextFlashScript : MonoBehaviour
     public void Flash(string text)
     {
         Debug.Log("FLASHING");
-
+        
 
         //  StartCoroutine(ShowAndHide(text));
         this.gameObject.SetActive(true);
