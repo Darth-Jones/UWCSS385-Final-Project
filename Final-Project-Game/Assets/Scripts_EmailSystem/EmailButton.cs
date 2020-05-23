@@ -21,7 +21,7 @@ public class EmailButton : MonoBehaviour
         Debug.Log("creating email:" + newEmail.hintText);
         this.headerText.text = newEmail.headerText;
     }
-
+    
     // Update is called once per frame
     public void OnClick()
     {

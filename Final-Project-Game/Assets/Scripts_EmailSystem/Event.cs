@@ -24,7 +24,7 @@ public class Event
         this.questSteps = new bool[stepCount];
         this.completed = false;
     }
-
+    
     public bool stepCompleted(int stepID)
     {
         questSteps[stepID] = true;

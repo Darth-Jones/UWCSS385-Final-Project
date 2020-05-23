@@ -76,7 +76,7 @@ public class Email
         flashingTextCanvas = GameObject.Find("FlashingTextCanvas");
         bodyCanvas = GameObject.Find("BodyCanvas");
     }
-
+    
     public bool stepCompleted()
     {
       //  Debug.Log("body text here:" + bodyText);
