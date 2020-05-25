@@ -69,7 +69,7 @@ public class HeroBehavior : MonoBehaviour {
             if (!touchedA)
             {
                 //   Debug.Log("touched A");
-                emailControl.GetComponent<EmailListControl>().GenEmail(3);
+                emailControl.GetComponent<EmailListControl>().CreateEmail(3);
             }
             touchedA = true;
         }
@@ -77,7 +77,7 @@ public class HeroBehavior : MonoBehaviour {
         {
             if (touchedA && !B)
             {
-                emailControl.GetComponent<EmailListControl>().GenEmail(4);
+                emailControl.GetComponent<EmailListControl>().CreateEmail(4);
                 B = true;
             }
         }

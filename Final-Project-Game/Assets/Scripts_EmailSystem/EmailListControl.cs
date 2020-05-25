@@ -10,6 +10,9 @@ public class EmailListControl : MonoBehaviour
     private GameObject buttonTemplate;
 
     public GameObject flashingText;
+
+    public GameObject eventLog;
+
     private int startingEmailCount = 6;
     // Start is called before the first frame update
 
@@ -55,8 +58,17 @@ public class EmailListControl : MonoBehaviour
         button3.GetComponent<EmailButton>().SetEmail(new Email(2, emailTextSplit[4], emailTextSplit[5]));
         button3.transform.SetParent(buttonTemplate.transform.parent, false);
     }
-    public void GenEmail(int emailID)
+
+
+
+
+
+
+
+
+    public void CreateEmail(int emailID)
     {
+    //    eventLog.GetComponent<EventLog>().FlashText("New Email");
 
         flashingText.GetComponent<TextFlashScript>().Flash("NEW EMAIL");
 
@@ -64,6 +76,26 @@ public class EmailListControl : MonoBehaviour
         button.SetActive(true);
 
         button.GetComponent<EmailButton>().SetEmail(new Email(emailID));
+        button.transform.SetParent(buttonTemplate.transform.parent, false);
+    }
+
+    public void CreateEmail(int emailID, string headerText, string bodyText)
+    {
+        eventLog.GetComponent<EventLog>().FlashText("New Email");
+        GameObject button = Instantiate(buttonTemplate) as GameObject;
+        button.SetActive(true);
+
+        button.GetComponent<EmailButton>().SetEmail(new Email(emailID, headerText, bodyText));
+        button.transform.SetParent(buttonTemplate.transform.parent, false);
+    }
+
+    public void CreateEmail(int emailID, string headerText, string bodyText, string hintText)
+    {
+        eventLog.GetComponent<EventLog>().FlashText("New Email");
+        GameObject button = Instantiate(buttonTemplate) as GameObject;
+        button.SetActive(true);
+
+        button.GetComponent<EmailButton>().SetEmail(new Email(emailID, headerText, bodyText, hintText));
         button.transform.SetParent(buttonTemplate.transform.parent, false);
     }
 }

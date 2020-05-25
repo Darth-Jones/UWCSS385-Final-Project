@@ -194,18 +194,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &12725664 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2062505146180430353, guid: 705049d46034f4b47ab353fbbd97e7d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1234713352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d62bf2acb163a945b01121512dc348c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &449747673
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,88 +451,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192296223}
   m_CullTransparentMesh: 0
---- !u!1001 &1234713352
+--- !u!1001 &1229372232
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2062505145871907759, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505145871907759, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146180430354, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 12725664}
-    - target: {fileID: 2062505146180430354, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146180430354, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146180430356, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146180430357, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146180430357, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146180430357, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146180430357, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146199951389, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146199951389, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062505146688920215, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4090657820517563382, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_FontData.m_HorizontalOverflow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4090657820517563382, guid: 705049d46034f4b47ab353fbbd97e7d4,
-        type: 3}
-      propertyPath: m_FontData.m_VerticalOverflow
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5587859344226057199, guid: 705049d46034f4b47ab353fbbd97e7d4,
         type: 3}
       propertyPath: m_Name

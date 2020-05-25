@@ -7,6 +7,7 @@ public class Event
     int eventID;
     int stepCount;
     bool[] questSteps;
+    string[] hintText;
     bool completed;
 
     public Event(int eventID)
@@ -17,30 +18,37 @@ public class Event
         this.completed = false;
     }
 
-    public Event(int eventID, int stepCount)
+    public Event(int eventID, int stepCount, string[] hintText)
     {
         this.eventID = eventID;
         this.stepCount = stepCount;
         this.questSteps = new bool[stepCount];
+        this.hintText = new string[stepCount];
         this.completed = false;
+
+        for (int i = 0; i < stepCount; i++)
+        {
+            this.hintText[i] = hintText[i];
+        }
     }
     
-    public bool stepCompleted(int stepID)
+    public string stepCompleted(int stepID)
     {
         questSteps[stepID] = true;
+
         for (int i = 0; i < stepCount; i++)
         {
             if (!questSteps[i])
             {
-                return false;
+                return hintText[stepID];
             }
         }
 
         completed = true;
-        return completed;
+        return hintText[stepID];
     }
 
-    public bool eventCompleted()
+    public bool isComplete()
     {
         return completed;
     }

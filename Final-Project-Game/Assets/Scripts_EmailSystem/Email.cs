@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class Email 
 {
-
-    public string headerText;
+    
+    public string headerText;              
     public string bodyText;
     public string hintText;
     public bool hasHintText;
@@ -21,9 +21,6 @@ public class Email
 
     public Email(int emailID) 
     {
-
-    
-
         this.emailID = emailID;
         string path = Application.dataPath + "/Text/questObj" + emailID + ".txt";
         Debug.Log(path);
@@ -43,9 +40,6 @@ public class Email
         {
             questFinished = true;
         }
-
-        
-
 
         Debug.Log("Asdfa" + headerText);
         flashingTextCanvas = GameObject.Find("FlashingTextCanvas");
@@ -77,27 +71,28 @@ public class Email
         bodyCanvas = GameObject.Find("BodyCanvas");
     }
     
-    public bool stepCompleted()
+    public string OnClick()
     {
-      //  Debug.Log("body text here:" + bodyText);
-  //      bodyCanvas.GetComponentInChildren<Text>().text = bodyText;   //GetComponentOfChild<Text>().text = 
-
         if (hasHintText)
         {
             if (!questFinished)
             {
+
+                /*
                 Debug.Log("stepCompleted part");
                 GameObject.Find("Canvas2").transform.GetChild(0).gameObject.SetActive(true);
                 Debug.Log("starting flash");
+
+
+
                 GameObject.Find("FlashingTextCanvas").GetComponent<TextFlashScript>().Flash(hintText);
                 GameObject.Find("EmailSystem").GetComponent<EventLog>().newText(hintText, emailID);
-
+                */
                 questFinished = true;
+                return hintText;
             }
-               
-            return true;
         }
 
-        return false;
+        return "";
     }
 }
