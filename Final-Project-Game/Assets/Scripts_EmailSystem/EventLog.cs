@@ -53,11 +53,6 @@ public class EventLog : MonoBehaviour
         }
     }
 
-    void OnGUI()
-    {
-        GUI.Label(new Rect(5, 0, 1000, 50), a);
-    }
-
     public void newHintText(string text)
     {
         checkPointText.AddFirst(text);
@@ -70,6 +65,11 @@ public class EventLog : MonoBehaviour
     public void CreateEvent(int eventID)
     {
         eventList.Add(eventID, new Event(eventID));
+    }
+
+    public void CreateEvent(int eventID, int stepCount, string[] hintText)
+    {
+        eventList.Add(eventID, new Event(eventID, stepCount, hintText));
     }
 
     public void CreateEmail(int emailID)
