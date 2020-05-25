@@ -19,7 +19,7 @@ public class EventLog : MonoBehaviour
     public GameObject emailControlList;
 
 
-    public GameObject emailCanvas;
+   // public GameObject emailCanvas;
     public GameObject bodyCanvas;
     public GameObject checkPointCanvas;
 
@@ -85,7 +85,7 @@ public class EventLog : MonoBehaviour
         emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID, headerText, bodyText, hintText);
     }
 
-    public bool stepCompleted(int eventID, int stepID)
+    public bool StepCompleted(int eventID, int stepID)
     {
         string flash = eventList[eventID].stepCompleted(stepID);
         if (flash != "")
