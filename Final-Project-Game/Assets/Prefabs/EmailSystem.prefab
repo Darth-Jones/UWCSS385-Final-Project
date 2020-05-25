@@ -2196,8 +2196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashingText: {fileID: 1551921837973484690}
   UICanvas: {fileID: 213144627326899360}
-  emailControlList: {fileID: 0}
-  emailCanvas: {fileID: 2062505146688920215}
+  emailControlList: {fileID: 2062505146688920215}
+  emailCanvas: {fileID: 4357017741284753680}
   bodyCanvas: {fileID: 4706522771967521865}
   checkPointCanvas: {fileID: 1764309184249359417}
   currentID: -1
