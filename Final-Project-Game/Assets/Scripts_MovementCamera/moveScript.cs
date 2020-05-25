@@ -28,30 +28,10 @@ public class moveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-            {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed,rb2d.velocity.x + (transform.up.x * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y + (transform.up.y * mHeroSpeed))));
-            }
-        else if (Input.GetKey(KeyCode.DownArrow))
-            {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x - (transform.up.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y - (transform.up.y * mHeroSpeed)));
-            }
-        if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed,rb2d.velocity.x - (Vector3.right.x * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y - (transform.right.y * mHeroSpeed))));
-            }
-        else if (Input.GetKey(KeyCode.RightArrow))
-            {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x + (Vector3.right.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y + (Vector3.right.y * mHeroSpeed)));
-            }
 
-        if (rb2d.velocity.x < -maxSpeed) {
-            rb2d.velocity = new Vector2( - maxSpeed, rb2d.velocity.y);
-        }
-        if (rb2d.velocity.y < -maxSpeed) {
-            rb2d.velocity = new Vector2( rb2d.velocity.x, -maxSpeed);
-        }
-
+        movePlayer();
+        updateRotation();
+        /*
         if (Input.GetKey(KeyCode.A))
             {
                 rotationX = 2;
@@ -64,7 +44,7 @@ public class moveScript : MonoBehaviour
             {
                 rotationX = 0;
             }
-
+        */
 
         //Move the Hero forward
 
@@ -75,5 +55,34 @@ public class moveScript : MonoBehaviour
 
         currentPos = this.transform.position;
         Debug.Log(currentPos);
+    }
+    public void movePlayer() {
+        if (Input.GetKey(KeyCode.UpArrow))
+            {
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed,rb2d.velocity.x + (Vector3.up.x * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y + (Vector3.up.y * mHeroSpeed))));
+            }
+        else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x - (Vector3.up.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y - (Vector3.up.y * mHeroSpeed)));
+            }
+        if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed,rb2d.velocity.x - (Vector3.right.x * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y - (Vector3.right.y * mHeroSpeed))));
+            }
+        else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x + (Vector3.right.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y + (Vector3.right.y * mHeroSpeed)));
+            }
+
+        if (rb2d.velocity.x < -maxSpeed) {
+            rb2d.velocity = new Vector2( - maxSpeed, rb2d.velocity.y);
+        }
+        if (rb2d.velocity.y < -maxSpeed) {
+            rb2d.velocity = new Vector2( rb2d.velocity.x, -maxSpeed);
+        }
+    }
+
+    public void updateRotation() {
+        transform.up = Vector3.up;
     }
 }

@@ -34,6 +34,7 @@ public class cameraFollowScript2 : MonoBehaviour
         expectedPos = new Vector2(transform.position.x + rb2d.velocity.x , (transform.position.y + rb2d.velocity.y));    
         //Debug.Log(transform.position);
     }
+    /*
     public bool needsReadjusting(Vector2 playerPos) {
         if (((transform.position.y  + Looseness) < playerPos.y) | ((transform.position.y - Looseness) > playerPos.y) | ((transform.position.x + Looseness) < playerPos.x) | (( transform.position.x - Looseness) > playerPos.x)) {
             Debug.Log("needsReadjusting");
@@ -41,5 +42,7 @@ public class cameraFollowScript2 : MonoBehaviour
 
         }
         else return false;
+        
     }
+    */
 }
