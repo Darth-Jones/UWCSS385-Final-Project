@@ -54,7 +54,7 @@ public class moveScript : MonoBehaviour
         verticalSpeed = rb2d.velocity.y;
 
         currentPos = this.transform.position;
-        Debug.Log(currentPos);
+        //Debug.Log(currentPos);
     }
     public void movePlayer() {
         if (Input.GetKey(KeyCode.UpArrow))
