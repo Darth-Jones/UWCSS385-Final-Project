@@ -10,7 +10,7 @@ public class EmailButton : MonoBehaviour
     private Text headerText;
 
     public GameObject bodyCanvas;
-
+    public GameObject eventLog;
 
     public Email email;
     public void SetEmail(Email newEmail)
@@ -21,12 +21,17 @@ public class EmailButton : MonoBehaviour
         Debug.Log("creating email:" + newEmail.hintText);
         this.headerText.text = newEmail.headerText;
     }
-
+    
     // Update is called once per frame
     public void OnClick()
     {
         Debug.Log("click worked");
-        email.stepCompleted();
+        string hintText = email.OnClick();
+        if (hintText != "")
+        {
+            eventLog.GetComponent<EventLog>().FlashText(hintText);
+            eventLog.GetComponent<EventLog>().newHintText(hintText);
+        }
 
         bodyCanvas.GetComponentInChildren<Text>().text = email.bodyText;
     }

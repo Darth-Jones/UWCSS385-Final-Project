@@ -18,7 +18,6 @@ public class TextFlashScript : MonoBehaviour
     void Start()
     {
         text.text = "";
-       // gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,13 +27,6 @@ public class TextFlashScript : MonoBehaviour
         if (flash)
         {
             text.text = questText;
-            //enabled = true;
-          //  gameObject.SetActive(true);
-            //  <Text>().text = questText;
-            //  gameObject.GetComponent<Text>() = true;
-            // SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
-            //  sprite.color = new Color(1f, 1f, 1f, 1f);
-
         }
         else
         {
@@ -48,8 +40,6 @@ public class TextFlashScript : MonoBehaviour
                 flash = false;
                 text.text = "";
                 gameObject.SetActive(false);
-               // gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                // enabled = false;
             }
         }
 
@@ -59,7 +49,7 @@ public class TextFlashScript : MonoBehaviour
     public void Flash(string text)
     {
         Debug.Log("FLASHING");
-
+        
 
         //  StartCoroutine(ShowAndHide(text));
         this.gameObject.SetActive(true);

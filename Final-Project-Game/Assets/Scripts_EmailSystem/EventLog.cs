@@ -10,13 +10,19 @@ public class EventLog : MonoBehaviour
 
     //public bool readchedA = false;
 
-    public Stack checkPointText;
-    private Dictionary<int, Quest> questList;
-    public Dictionary<int, bool> questBool;
+    public LinkedList<string> checkPointText;
+    private Dictionary<int, Event> eventList;
 
     public GameObject flashingText;
-    public GameObject emailCanvas;
+
+    public GameObject UICanvas;
+    public GameObject emailControlList;
+
+
+   // public GameObject emailCanvas;
     public GameObject bodyCanvas;
+    public GameObject checkPointCanvas;
+
     private bool showEmailCanvas;
 
 
@@ -26,26 +32,12 @@ public class EventLog : MonoBehaviour
     void Start()
     {
         showEmailCanvas = false;
-        checkPointText = new Stack();
-        checkPointText.Push("");
-        questList = new Dictionary<int, Quest>();
-        questBool = new Dictionary<int, bool>();
+        checkPointText = new LinkedList<string>();
+        checkPointText.AddFirst("");
+        eventList = new Dictionary<int, Event>();
 
-       // questList.Add(0, new EmailQuest(0));
-    //    questList.Add(1, new EmailQuest(1));
-        // questText.Add(0, "Reached the A marker");
-        // questBool.Add(0, false);
-        /*
-  
-        questText.Add(1, "Reached the D marker");
-        questBool.Add(1, false);
+        a = Application.dataPath;
 
-        questText.Add(2, "Reached the B marker");
-        questBool.Add(2, false);
-
-        questText.Add(3, "Reached the C marker");
-        questBool.Add(3, false);
-        */
     }
 
 
@@ -55,54 +47,63 @@ public class EventLog : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-
             showEmailCanvas = !showEmailCanvas;
-            emailCanvas.SetActive(showEmailCanvas);
-            bodyCanvas.SetActive(showEmailCanvas);
-            
-            //    uiCounter.GetComponent<UITracking>().ModeChange();
-            //    mouseControl = !mouseControl;
+            UICanvas.SetActive(showEmailCanvas);
+        //    bodyCanvas.SetActive(showEmailCanvas);        
         }
     }
 
-    void OnGUI()
+    public void newHintText(string text)
     {
-        GUI.Label(new Rect(5, 0, 1000, 50), a);
-    }
-
-    public void newText(string text, int ID)
-    {
-        Debug.Log("ID: " + currentID + " questID: " + ID);
-        if (ID > currentID)
-        {
+        checkPointText.AddFirst(text);
+        checkPointCanvas.GetComponent<CheckPointCanvasController>().newText(text);
             a = text;
-            currentID = ID;
-        }
+       
     }
 
-    public void newEvent(int eventID, int stepID)
+    // Creates a new event based on the given eventID
+    public void CreateEvent(int eventID)
     {
-        questList[eventID].stepCompleted(stepID);
-        a = (string)checkPointText.Peek();
-        /*
-        if (questBool[eventID] == false)
+        eventList.Add(eventID, new Event(eventID));
+    }
+
+    public void CreateEvent(int eventID, int stepCount, string[] hintText)
+    {
+        eventList.Add(eventID, new Event(eventID, stepCount, hintText));
+    }
+
+    public void CreateEmail(int emailID)
+    {
+        emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID);
+    }
+    public void CreateEmail(int emailID, string headerText, string bodyText)
+    {
+        emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID, headerText, bodyText);
+    }
+    public void CreateEmail(int emailID, string headerText, string bodyText, string hintText)
+    {
+        emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID, headerText, bodyText, hintText);
+    }
+
+    public bool StepCompleted(int eventID, int stepID)
+    {
+        string flash = eventList[eventID].stepCompleted(stepID);
+        if (flash != "")
         {
-            if (eventID < 3)
-            {
-                // flashingText.Test();
-                questBool[eventID] = true;
-                flashingText.GetComponent<TextFlashScript>().Flash(questText[eventID]);
-            }
-            else 
-            {
-                if (questBool[0] && questBool[1] && questBool[2])
-                {
-                    questBool[eventID] = true;
-                    flashingText.GetComponent<TextFlashScript>().Flash(questText[eventID]);
-                }
-            }
+            FlashText(flash);
+            newHintText(flash);
         }
-        */
+        return eventList[eventID].isComplete();
+    }
+    // checks if all steps in the event are completed
+    public bool isComplete(int eventID)
+    {
+        return eventList[eventID].isComplete();
+    }
+
+    public void FlashText(string flashText)
+    {
+        flashingText.GetComponent<TextFlashScript>().Flash(flashText);
     }
     
 }

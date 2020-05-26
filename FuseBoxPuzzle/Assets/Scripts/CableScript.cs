@@ -47,7 +47,9 @@ public class CableScript : MonoBehaviour
     public int numberNeeded2;
     public int numberNeeded3;
 
-    
+    private Vector3 scaleUp;
+    private Vector3 scaleDown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,11 +58,21 @@ public class CableScript : MonoBehaviour
         leftTilePort1Taken = leftTilePort2Taken = leftTilePort3Taken = false;
         midTilePort1Taken = midTilePort2Taken = midTilePort3Taken = false;
         rightTilePort1Taken = rightilePort2Taken = rightTilePort3Taken = false;
+        scaleUp = new Vector3(10F, 10, 10);
+        scaleDown = new Vector3(transform.localScale.x,
+            transform.localScale.y, transform.localScale.z);
     }
 
-    /// <summary>
-    /// This method 
-    /// </summary>
+    void Update()
+    {
+        if (totalTile1 == numberNeeded1 && totalTile2 == numberNeeded2
+            && totalTile3 == numberNeeded3)
+        {
+            // Do something here
+            Debug.Log("PUZZLE SOLVED");
+        }
+    }
+
     private void OnMouseDown()
     {
         if (!locked && !lineLocked)
@@ -107,7 +119,7 @@ public class CableScript : MonoBehaviour
 
     private void OnMouseUp()
     {
-
+        transform.localScale = scaleDown;
         if (!locked)
         {
             if (Mathf.Abs(transform.position.x - leftTilePosition.position.x) <= 5f &&
@@ -217,42 +229,22 @@ public class CableScript : MonoBehaviour
         }
     }
 
+    private void OnMouseOver()
+    {
+        if (!locked) {
+            transform.localScale = scaleUp;
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        transform.localScale = scaleDown;
+    }
+
     public static void ResetVariables() {
         totalTile1 -= totalTile1;
         totalTile2 -= totalTile2;
         totalTile3 -= totalTile3;
     }
-
-    //public int GetTotalTile1()
-    //{
-    //    return this.totalTile1;
-    //}
-
-    //public int GetTotalTile2()
-    //{
-    //    return this.totalTile2;
-    //}
-
-    //public int GetTotalTile3()
-    //{
-    //    return this.totalTile3;
-    //}
-
-    //public void SetTotalTile1(int total)
-    //{
-    //    this.totalTile1 = total;
-    //}
-
-    //public void SetTotalTile2(int total)
-    //{
-    //    this.totalTile2 = total;
-    //}
-
-    //public void SetTotalTile3(int total)
-    //{
-    //    totalTile3 = total;
-    //}
-
-
 
 }
