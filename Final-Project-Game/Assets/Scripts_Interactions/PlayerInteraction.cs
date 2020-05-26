@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField]
     private bool inInteractionZone = false;
     private GameObject interactionObject;
 
@@ -21,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         inInteractionZone = !inInteractionZone;
         interactionObject = collision.gameObject;
@@ -29,7 +28,7 @@ public class PlayerInteraction : MonoBehaviour
         interactionScript.Triggered("enter");
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         inInteractionZone = !inInteractionZone;
         interactionObject = collision.gameObject;

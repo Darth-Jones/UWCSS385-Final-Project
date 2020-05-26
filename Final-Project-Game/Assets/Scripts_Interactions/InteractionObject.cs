@@ -43,13 +43,12 @@ public class InteractionObject : MonoBehaviour
         
         if (!(interactedWith))
         {
-            interactedWith = true;
+            
 
             if (trigger == "enter")
             {
                 if (displayUIText)
                     DisplayUIText();
-
 
             }
             else if (trigger == "exit")
@@ -57,9 +56,14 @@ public class InteractionObject : MonoBehaviour
                 if (displayUIText)
                     RemoveUIText();
 
+                if (displayObjectOnClick)
+                    RemoveObject();
+
             }
             else if (trigger == "click")
             {
+                interactedWith = true;
+
                 if (createEmail)
                     CreateEmail();
 
@@ -68,6 +72,9 @@ public class InteractionObject : MonoBehaviour
 
                 if (completesEventStep)
                     CompleteEventStep();
+
+                if (displayObjectOnClick)
+                    DisplayObject();
             }
         }
 
@@ -82,30 +89,40 @@ public class InteractionObject : MonoBehaviour
     void DisplayUIText()
     {
         //need to implement UI Object to display
+        Debug.Log("Press Space to Interact");
     }
 
     void RemoveUIText()
     {
-
+        Debug.Log("Left Interaction Zone");
     }
 
     //Creates a new event for the objectives
     void CreateEvent()
     {
-
+        Debug.Log("Event Created");
     }
 
     //Completes the given event step
     void CompleteEventStep()
     {
-
+        Debug.Log("Step Completed");
     }
 
     //Creates an Email Object
     void CreateEmail()
     {
-
+        Debug.Log("Email Created");
     }
 
+    void DisplayObject()
+    {
+        interactable.SetActive(true);
+    }
+
+    void RemoveObject()
+    {
+        interactable.SetActive(false);
+    }
 
 }
