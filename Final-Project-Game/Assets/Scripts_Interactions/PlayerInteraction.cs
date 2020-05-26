@@ -22,17 +22,23 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        inInteractionZone = !inInteractionZone;
-        interactionObject = collision.gameObject;
-        InteractionObject interactionScript = interactionObject.GetComponent<InteractionObject>();
-        interactionScript.Triggered("enter");
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            inInteractionZone = !inInteractionZone;
+            interactionObject = collision.gameObject;
+            InteractionObject interactionScript = interactionObject.GetComponent<InteractionObject>();
+            interactionScript.Triggered("enter");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        inInteractionZone = !inInteractionZone;
-        interactionObject = collision.gameObject;
-        InteractionObject interactionScript = interactionObject.GetComponent<InteractionObject>();
-        interactionScript.Triggered("exit");
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            inInteractionZone = !inInteractionZone;
+            interactionObject = collision.gameObject;
+            InteractionObject interactionScript = interactionObject.GetComponent<InteractionObject>();
+            interactionScript.Triggered("exit");
+        }
     }
 }
