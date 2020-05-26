@@ -48,12 +48,14 @@ public class InteractionObject : MonoBehaviour
 
             if (trigger == "enter")
             {
+                Debug.Log("Interaction exit");
                 if (displayUIText)
                     DisplayUIText();
 
             }
             else if (trigger == "exit")
             {
+                Debug.Log("Interaction exit");
                 if (displayUIText)
                     RemoveUIText();
 
