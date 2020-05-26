@@ -6,6 +6,7 @@ public class InteractionObject : MonoBehaviour
 {
     //Interaction Options
     public GameObject interactable;
+    public GameObject emailSystem;
     public bool displayObjectOnClick = false;
     public bool displayUIText = false;
     public string UIText;
@@ -100,18 +101,29 @@ public class InteractionObject : MonoBehaviour
     //Creates a new event for the objectives
     void CreateEvent()
     {
+        emailSystem.GetComponent<EventLog>().CreateEvent(eventID, stepCount, eventHintText);
         Debug.Log("Event Created");
     }
 
     //Completes the given event step
     void CompleteEventStep()
     {
+        if (completesEventStep)
+        {
+            emailSystem.GetComponent<EventLog>().StepCompleted(completeEventID, step);
+            completesEventStep = false;
+        }
         Debug.Log("Step Completed");
     }
 
     //Creates an Email Object
     void CreateEmail()
     {
+        if (createEmail)
+        {
+            emailSystem.GetComponent<EventLog>().CreateEmail(emailID, emailHeader, emailBody, emailHintText);
+            createEmail = false;
+        }
         Debug.Log("Email Created");
     }
 
