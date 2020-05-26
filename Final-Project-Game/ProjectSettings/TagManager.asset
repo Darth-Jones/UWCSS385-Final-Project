@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
+  - DisplayNumber
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 967220381
+    locked: 0
+  - name: Keypad
+    uniqueID: 3002427435
     locked: 0
