@@ -13,11 +13,12 @@ public class EventLog : MonoBehaviour
     public LinkedList<string> checkPointText;
     private Dictionary<int, Event> eventList;
 
+    // GameObject that flashes when new emails and objective hints appear
     public GameObject flashingText;
 
     public GameObject UICanvas;
     public GameObject emailControlList;
-
+    public GameObject interactibleCanvas;
 
    // public GameObject emailCanvas;
     public GameObject bodyCanvas;
@@ -45,11 +46,27 @@ public class EventLog : MonoBehaviour
     // Update is called once per frame
         void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             showEmailCanvas = !showEmailCanvas;
             UICanvas.SetActive(showEmailCanvas);
         //    bodyCanvas.SetActive(showEmailCanvas);        
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            // showEmailCanvas = !showEmailCanvas;
+            // UICanvas.SetActive(showEmailCanvas);
+            //    bodyCanvas.SetActive(showEmailCanvas);     
+
+            InteractibleCanvas(true);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            // showEmailCanvas = !showEmailCanvas;
+            // UICanvas.SetActive(showEmailCanvas);
+            //    bodyCanvas.SetActive(showEmailCanvas);     
+
+            InteractibleCanvas(false);
         }
     }
 
@@ -98,7 +115,15 @@ public class EventLog : MonoBehaviour
     // checks if all steps in the event are completed
     public bool isComplete(int eventID)
     {
-        return eventList[eventID].isComplete();
+        if ( eventList.ContainsKey(eventID) )
+        {
+            return eventList[eventID].isComplete();
+        }
+        else
+        {
+            return false;
+        }
+       
     }
 
     public void FlashText(string flashText)
@@ -106,4 +131,10 @@ public class EventLog : MonoBehaviour
         flashingText.GetComponent<TextFlashScript>().Flash(flashText);
     }
     
+    // use this to turn on and off the interactible canvas when entering and exiting
+    // an interacible object's collider
+    public void InteractibleCanvas(bool turnOn)
+    {
+        interactibleCanvas.SetActive(turnOn);
+    }
 }
