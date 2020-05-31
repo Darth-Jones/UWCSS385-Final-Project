@@ -11,6 +11,7 @@ public class EmailButton : MonoBehaviour
 
     public GameObject bodyCanvas;
     public GameObject eventLog;
+    public GameObject menuButton;
 
     public Email email;
     public void SetEmail(Email newEmail)
@@ -31,6 +32,7 @@ public class EmailButton : MonoBehaviour
         {
             eventLog.GetComponent<EventLog>().FlashText(hintText);
             eventLog.GetComponent<EventLog>().newHintText(hintText);
+            menuButton.GetComponent<MenuButtonController>().newEventText();
         }
 
         bodyCanvas.GetComponentInChildren<Text>().text = email.bodyText;
