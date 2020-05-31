@@ -12,6 +12,8 @@ public class cameraFollowScript2 : MonoBehaviour
     private moveScript playerMovement;
     Rigidbody2D rb2d;
     public Vector3 expectedPos;
+    public float size = 4.0f;
+    public Camera cam;
     // Start is called before the first frame update
 
 
@@ -22,6 +24,7 @@ public class cameraFollowScript2 : MonoBehaviour
         transform.position = expectedPos;
         rb2d = GetComponent<Rigidbody2D>();
         playerPos = playerMovement.currentPos;
+        cam = GetComponent<Camera>();
         
     }
 
@@ -32,6 +35,13 @@ public class cameraFollowScript2 : MonoBehaviour
         
         rb2d.velocity = new Vector2(-((transform.position.x - playerPos.x) * rubberBandNess), -((transform.position.y - playerPos.y) * rubberBandNess)); 
         expectedPos = new Vector2(transform.position.x + rb2d.velocity.x , (transform.position.y + rb2d.velocity.y));    
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            size = size + 1;
+        }
+        if (Input.GetKeyDown(KeyCode.X)) {
+            size = size - 1;
+        }
+        cam.orthographicSize = size;
         //Debug.Log(transform.position);
     }
     /*

@@ -57,21 +57,13 @@ public class moveScript : MonoBehaviour
         //Debug.Log(currentPos);
     }
     public void movePlayer() {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetAxis("Vertical") != 0)
             {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed,rb2d.velocity.x + (Vector3.up.x * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y + (Vector3.up.y * mHeroSpeed))));
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x), Math.Min(maxSpeed,(rb2d.velocity.y + (Input.GetAxis("Vertical") * mHeroSpeed))));
             }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetAxis("Horizontal") != 0)
             {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x - (Vector3.up.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y - (Vector3.up.y * mHeroSpeed)));
-            }
-        if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed,rb2d.velocity.x - (Vector3.right.x * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y - (Vector3.right.y * mHeroSpeed))));
-            }
-        else if (Input.GetKey(KeyCode.RightArrow))
-            {
-                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x + (Vector3.right.x * mHeroSpeed)),Math.Min(maxSpeed, rb2d.velocity.y + (Vector3.right.y * mHeroSpeed)));
+                rb2d.velocity = new Vector2(Math.Min(maxSpeed, rb2d.velocity.x + (Input.GetAxis("Horizontal") * mHeroSpeed)), Math.Min(maxSpeed,(rb2d.velocity.y)));
             }
 
         if (rb2d.velocity.x < -maxSpeed) {
