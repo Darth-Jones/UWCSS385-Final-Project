@@ -58,7 +58,7 @@ public class CableScript : MonoBehaviour
         leftTilePort1Taken = leftTilePort2Taken = leftTilePort3Taken = false;
         midTilePort1Taken = midTilePort2Taken = midTilePort3Taken = false;
         rightTilePort1Taken = rightilePort2Taken = rightTilePort3Taken = false;
-        scaleUp = new Vector3(10F, 10, 10);
+        scaleUp = new Vector3(10, 10, 10);
         scaleDown = new Vector3(transform.localScale.x,
             transform.localScale.y, transform.localScale.z);
     }
