@@ -48,8 +48,9 @@ public class EventLog : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            showEmailCanvas = !showEmailCanvas;
-            UICanvas.SetActive(showEmailCanvas);
+            //  showEmailCanvas = !showEmailCanvas;
+            menuButton.GetComponent<MenuButtonController>().showEmailCanvas = false;
+            UICanvas.SetActive(false);
         //    bodyCanvas.SetActive(showEmailCanvas);        
         }
 
