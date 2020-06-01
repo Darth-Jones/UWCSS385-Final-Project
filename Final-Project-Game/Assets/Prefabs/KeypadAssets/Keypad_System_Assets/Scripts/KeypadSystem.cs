@@ -90,8 +90,22 @@ public class KeypadSystem : MonoBehaviour
     //processes the number and checks if correct
     public void EnterKeyPressed()
     {
+        bool correct = true;
+        int i = 0;
         if(doorScript != null) {
-            if (numbers == doorScript.keyCode) doorScript.enabled = false;
+            foreach(int number in numbers) {
+                if (number != doorScript.keyCode[i]) {
+                    correct = false;
+                    break;
+                }
+                i++;
+            }
+            if (correct) {
+                doorScript.enabled = false;
+            
+                Debug.Log("Opened");
+                this.gameObject.SetActive(false);
+            }
         }
 
         //if (numbers == trigger.expectedNums) {
