@@ -10,6 +10,7 @@ public class InteractionObject : MonoBehaviour
     public bool displayObjectOnClick = false;
     public bool displayUIText = false;
     public string UIText;
+    public bool createEmailOrEventOnTouch =false;
     public bool createEmail = false;
     public bool creatEvent = false;
     public bool repeatInteraction = false;
@@ -51,6 +52,15 @@ public class InteractionObject : MonoBehaviour
                 Debug.Log("Interaction exit");
                 if (displayUIText)
                     DisplayUIText();
+                if (createEmailOrEventOnTouch)
+                {
+                    if (createEmail)
+                        CreateEmail();
+
+                    if (creatEvent)
+                        CreateEvent();
+                    interactedWith = true;
+                }
 
             }
             else if (trigger == "exit")
@@ -80,7 +90,6 @@ public class InteractionObject : MonoBehaviour
                     DisplayObject();
             }
         }
-
         if (repeatInteraction)
         {
             interactedWith = false;
@@ -92,12 +101,12 @@ public class InteractionObject : MonoBehaviour
     void DisplayUIText()
     {
         //need to implement UI Object to display
-        Debug.Log("Press Space to Interact");
+        emailSystem.GetComponent<EventLog>().TurnOnInteractibleCanvas(UIText);
     }
 
     void RemoveUIText()
     {
-        Debug.Log("Left Interaction Zone");
+        emailSystem.GetComponent<EventLog>().TurnOffInteractibleCanvas();
     }
 
     //Creates a new event for the objectives

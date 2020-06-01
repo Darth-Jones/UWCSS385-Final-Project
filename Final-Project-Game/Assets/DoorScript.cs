@@ -24,7 +24,7 @@ public class DoorScript : MonoBehaviour
     void Update()
     {
         if(!enabled) {
-            Destroy(this);
+            this.gameObject.SetActive(false);
         }
     }
 }
