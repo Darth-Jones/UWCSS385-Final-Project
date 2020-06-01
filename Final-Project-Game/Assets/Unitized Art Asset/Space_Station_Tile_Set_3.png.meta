@@ -1,0 +1,2243 @@
+fileFormatVersion: 2
+guid: 2b844e34f0b171945b4caef1f191134e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Space_Station_Tile_Set_3_0
+    21300002: Space_Station_Tile_Set_3_1
+    21300004: Space_Station_Tile_Set_3_2
+    21300006: Space_Station_Tile_Set_3_3
+    21300008: Space_Station_Tile_Set_3_4
+    21300010: Space_Station_Tile_Set_3_5
+    21300012: Space_Station_Tile_Set_3_6
+    21300014: Space_Station_Tile_Set_3_7
+    21300016: Space_Station_Tile_Set_3_8
+    21300018: Space_Station_Tile_Set_3_9
+    21300020: Space_Station_Tile_Set_3_10
+    21300022: Space_Station_Tile_Set_3_11
+    21300024: Space_Station_Tile_Set_3_12
+    21300026: Space_Station_Tile_Set_3_13
+    21300028: Space_Station_Tile_Set_3_14
+    21300030: Space_Station_Tile_Set_3_15
+    21300032: Space_Station_Tile_Set_3_16
+    21300034: Space_Station_Tile_Set_3_17
+    21300036: Space_Station_Tile_Set_3_18
+    21300038: Space_Station_Tile_Set_3_19
+    21300040: Space_Station_Tile_Set_3_20
+    21300042: Space_Station_Tile_Set_3_21
+    21300044: Space_Station_Tile_Set_3_22
+    21300046: Space_Station_Tile_Set_3_23
+    21300048: Space_Station_Tile_Set_3_24
+    21300050: Space_Station_Tile_Set_3_25
+    21300052: Space_Station_Tile_Set_3_26
+    21300054: Space_Station_Tile_Set_3_27
+    21300056: Space_Station_Tile_Set_3_28
+    21300058: Space_Station_Tile_Set_3_29
+    21300060: Space_Station_Tile_Set_3_30
+    21300062: Space_Station_Tile_Set_3_31
+    21300064: Space_Station_Tile_Set_3_32
+    21300066: Space_Station_Tile_Set_3_33
+    21300068: Space_Station_Tile_Set_3_34
+    21300070: Space_Station_Tile_Set_3_35
+    21300072: Space_Station_Tile_Set_3_36
+    21300074: Space_Station_Tile_Set_3_37
+    21300076: Space_Station_Tile_Set_3_38
+    21300078: Space_Station_Tile_Set_3_39
+    21300080: Space_Station_Tile_Set_3_40
+    21300082: Space_Station_Tile_Set_3_41
+    21300084: Space_Station_Tile_Set_3_42
+    21300086: Space_Station_Tile_Set_3_43
+    21300088: Space_Station_Tile_Set_3_44
+    21300090: Space_Station_Tile_Set_3_45
+    21300092: Space_Station_Tile_Set_3_46
+    21300094: Space_Station_Tile_Set_3_47
+    21300096: Space_Station_Tile_Set_3_48
+    21300098: Space_Station_Tile_Set_3_49
+    21300100: Space_Station_Tile_Set_3_50
+    21300102: Space_Station_Tile_Set_3_51
+    21300104: Space_Station_Tile_Set_3_52
+    21300106: Space_Station_Tile_Set_3_53
+    21300108: Space_Station_Tile_Set_3_54
+    21300110: Space_Station_Tile_Set_3_55
+    21300112: Space_Station_Tile_Set_3_56
+    21300114: Space_Station_Tile_Set_3_57
+    21300116: Space_Station_Tile_Set_3_58
+    21300118: Space_Station_Tile_Set_3_59
+    21300120: Space_Station_Tile_Set_3_60
+    21300122: Space_Station_Tile_Set_3_61
+    21300124: Space_Station_Tile_Set_3_62
+    21300126: Space_Station_Tile_Set_3_63
+    21300128: Space_Station_Tile_Set_3_64
+    21300130: Space_Station_Tile_Set_3_65
+    21300132: Space_Station_Tile_Set_3_66
+    21300134: Space_Station_Tile_Set_3_67
+    21300136: Space_Station_Tile_Set_3_68
+    21300138: Space_Station_Tile_Set_3_69
+    21300140: Space_Station_Tile_Set_3_70
+    21300142: Space_Station_Tile_Set_3_71
+    21300144: Space_Station_Tile_Set_3_72
+    21300146: Space_Station_Tile_Set_3_73
+    21300148: Space_Station_Tile_Set_3_74
+    21300150: Space_Station_Tile_Set_3_75
+    21300152: Space_Station_Tile_Set_3_76
+    21300154: Space_Station_Tile_Set_3_77
+    21300156: Space_Station_Tile_Set_3_78
+    21300158: Space_Station_Tile_Set_3_79
+    21300160: Space_Station_Tile_Set_3_80
+    21300162: Space_Station_Tile_Set_3_81
+    21300164: Space_Station_Tile_Set_3_82
+    21300166: Space_Station_Tile_Set_3_83
+    21300168: Space_Station_Tile_Set_3_84
+    21300170: Space_Station_Tile_Set_3_85
+    21300172: Space_Station_Tile_Set_3_86
+    21300174: Space_Station_Tile_Set_3_87
+    21300176: Space_Station_Tile_Set_3_88
+    21300178: Space_Station_Tile_Set_3_89
+    21300180: Space_Station_Tile_Set_3_90
+    21300182: Space_Station_Tile_Set_3_91
+    21300184: Space_Station_Tile_Set_3_92
+    21300186: Space_Station_Tile_Set_3_93
+    21300188: Space_Station_Tile_Set_3_94
+    21300190: Space_Station_Tile_Set_3_95
+    21300192: Space_Station_Tile_Set_3_96
+    21300194: Space_Station_Tile_Set_3_97
+    21300196: Space_Station_Tile_Set_3_98
+    21300198: Space_Station_Tile_Set_3_99
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 90
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a526ea088aac74fafa2eb9893efc13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42d49931f0fd2c4bb1887d7737edfc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98164cdd4d714a4e9a43b953032c77a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7d69c04d7038d43944ffb3af1591dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117d06504a658894ba5d8bec8d40977d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ccdda377f45a54ebfcda1107c3f6aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3ef94e89fbc904497676bd17cf5f58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_7
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74009c3a47505eb4390e835343e4f20b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_8
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfafa4eac5a3064782a008ce09fc6f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_9
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 810
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8408ee9145855d4cad52c84cffac4f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afdd29d6d96e144089009bcd2205395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ebc8f5aa0b5f74287592bdf702250e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_12
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f747c788ec964494b8637329534e12b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_13
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3987c5b69ddca4d9bb2a2353b8901a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_14
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23459310ba8f8f498eaec239271d613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_15
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19f2a763f590814997f15f59600b566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_16
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b381f4fd9e07f44e85550bf2352b838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_17
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1324be1f31642409abdfb0dd10fc82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_18
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4564dfd872de44c82c94de07a35d12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_19
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609b33e6e41bc1b48b27406d511b2082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a309bc4585f314b9d0044e24f9dab2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_21
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e810c288958666948bd470d6a7b33279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_22
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bb1f9878534864fb72a206a5e20ec5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63506a01820e76429dff784b5c6d465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_24
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0efd28652c22cc4293ad748a4ef637a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_25
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571a8796714c0cf4697e17a8ff222fd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_26
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772ba3715aab3d946ba6b8ca90355488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_27
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8cf115e4012bf4bb3c6a06ea7888cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_28
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab2b26b92af34e41b6256b6940398e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_29
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5826d8cf63e36d7429dbc440a49a32d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98175edb2c2e7647b1f8a7f3d7fe5d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_31
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad73126c04458134b9e63cb381c8ca83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_32
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25afdab3e9981db4a8b0cae23134cf2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_33
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d229498d9b7cd0449b1fad55b8d2fae8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_34
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382fec09d0200e34d9f880a7344d518f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_35
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e400f925b3e90043b064feef69df5ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_36
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a02a94ca3ee394b95da32efa09e0c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_37
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360deb44d9ae7834fb0dfea99112e362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_38
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449360963f6050b49ae262ec75edf8e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_39
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88752429f41c00489b274f77aaf9b87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba448702ca9f76d41bd794b6744bd45f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_41
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2be48c19afc4f42a74cf7546da70d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_42
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd9f7899582ddc499b452512be2f320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_43
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c50939bf7479244bcdd2807635e568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_44
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da625962330ad574dad5b3ecb999ee5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_45
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf3fac4794593f4caf7fdc94c73a1e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_46
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf38051a52ecf74d827c89d1c93e21b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_47
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322b6200478ad734882e5da9c481e302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_48
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da300c49f2b09f446b25b15b4fc522ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_49
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b624cf482d10a0747a1229541a7d2008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e15a729b9a5014b8592d94006036b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_51
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd4488a4b6bcaf4aa739abdb18fd53d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_52
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65869fc64ae8d5f4488681ab1c5b2003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_53
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc8d9eae5b4ae943b11b1520bd30f7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_54
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e78a15295646324eb6702a24c38fa8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_55
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d94287f80f816842a5d93e84a9483e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_56
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e39355453a54a4a8ee928e39d2e239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_57
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f4e847f4b899a4abc44ca3e0f88125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_58
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bd01f8f0f3ee2489f676a2d8e421a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_59
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505eff3074f15d4419697093410d208e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0d2de2a9ef26046a110d041488da9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_61
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9f87fee7793e84ab5cd4e48058c6e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_62
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258a9a1f28f65ba429420043fb77dcd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_63
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff96f0da39f2c1744b3baf2f8fa63565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_64
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547782b941633bf4e960dc6c8cff1cd9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_65
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1b934b6a008c7468a0a9ab3af66ada
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_66
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8554246c6ca6145b46b1fd0de8dd9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_67
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21db2b9041cfd04db3386c25995517b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_68
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a7e2f4171013a4a99c4f66a2134ca7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_69
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdac0168796fc1478e6c232b8ceced7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88baa891c55acba43b56a3e81fe68af5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_71
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f2db3a08eb39c49bd79e080756b693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_72
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f060f59d7cf150d49800f1b638ead90b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_73
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7122627d6f2a0e4885dcd736474a9d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_74
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603eb264e4cb7404f853dd9771f21bd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_75
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6b6abfdfd91be4dba376d6d2f5a616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_76
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dbac705ce294c4d907ed5543a32a20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_77
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114394cd2178c2c4ea74eeb8c789593e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_78
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028a35c9c63e7854cab4ece71fbed30a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_79
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5fb536679c01d4ab4c94f04119fc6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1086c34db19a40a4ca4bb93cc83fea06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_81
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213de1de997281c46bc0326e2fc8756f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_82
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4349a58a6fceeee40818a0dcae82a931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_83
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdd0576f2953d442a022637c11cdea3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_84
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228422a44b37adb4f99a854d664ffee0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_85
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e3ebca97d92da49b9afed151ba5d85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_86
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d570e9a1b0d770f4f94bcc3d119575e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_87
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c98681e9d69e8a4cb566dd4fb1ce3f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_88
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01b95eee6f973a498ffdbb2744ac7f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_89
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31a3f5805b687c448037ff22eedb0cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c5f2866ed79c74c8755bd3c8f498e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_91
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7917fe96542b8a4e922069b1f75696a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_92
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcd97d103c9c1f4e834d2c9d93fe18b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_93
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8249d51781163e44a6a53f96dae8dba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_94
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c5a2f6e52a52040a728b3d0b5e8ff1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_95
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ac8ff4dabb3ab48aa733e6a4292f46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_96
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab2c278dcdc34e47bd1a0365fa83729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_97
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0623cc61b6fd54384b31c505399e8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_98
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122546fe08252c645a3b015db8a1e0f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Station_Tile_Set_3_99
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c79e85d5a146ff438d7d60ce7d1c73c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: acbf7a5fddf824f43a440cfef74ba731
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
