@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 1999192377}
   - component: {fileID: 1999192379}
   - component: {fileID: 1999192380}
+  - component: {fileID: 1999192381}
   m_Layer: 0
   m_Name: ResetButton
   m_TagString: Untagged
@@ -322,6 +323,19 @@ MonoBehaviour:
   sceneName: FuseBoxTerry
   OGSprite: {fileID: 21300000, guid: fed2ffcf717b04731a016727bdf44422, type: 3}
   newSprite: {fileID: 21300000, guid: 4e26af186a54347e2a4ac023ac7ba656, type: 3}
+--- !u!114 &1999192381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999192376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9050d8239cc13486ea0e66cab812aa21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleUp: {x: 15, y: 15, z: 15}
 --- !u!1001 &5425061919661917779
 PrefabInstance:
   m_ObjectHideFlags: 0
