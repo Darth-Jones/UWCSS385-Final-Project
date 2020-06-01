@@ -13,11 +13,12 @@ public class EventLog : MonoBehaviour
     public LinkedList<string> checkPointText;
     private Dictionary<int, Event> eventList;
 
+    // GameObject that flashes when new emails and objective hints appear
     public GameObject flashingText;
-
+    public GameObject menuButton;
     public GameObject UICanvas;
     public GameObject emailControlList;
-
+    public GameObject interactibleCanvas;
 
    // public GameObject emailCanvas;
     public GameObject bodyCanvas;
@@ -45,11 +46,25 @@ public class EventLog : MonoBehaviour
     // Update is called once per frame
         void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            showEmailCanvas = !showEmailCanvas;
-            UICanvas.SetActive(showEmailCanvas);
+            //  showEmailCanvas = !showEmailCanvas;
+            menuButton.GetComponent<MenuButtonController>().showEmailCanvas = false;
+            UICanvas.SetActive(false);
         //    bodyCanvas.SetActive(showEmailCanvas);        
+        }
+
+
+        // THESE ARE FOR TESTING INTERACTIBLE CANVAS
+        if (Input.GetKeyDown(KeyCode.L))
+        { 
+
+            TurnOnInteractibleCanvas("Press Space to Interact");
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {   
+
+            TurnOffInteractibleCanvas();
         }
     }
 
@@ -75,14 +90,19 @@ public class EventLog : MonoBehaviour
     public void CreateEmail(int emailID)
     {
         emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID);
+        menuButton.GetComponent<MenuButtonController>().newEmail();
     }
     public void CreateEmail(int emailID, string headerText, string bodyText)
     {
         emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID, headerText, bodyText);
+        menuButton.GetComponent<MenuButtonController>().newEmail();
+
     }
     public void CreateEmail(int emailID, string headerText, string bodyText, string hintText)
     {
         emailControlList.GetComponent<EmailListControl>().CreateEmail(emailID, headerText, bodyText, hintText);
+        menuButton.GetComponent<MenuButtonController>().newEmail();
+
     }
 
     public bool StepCompleted(int eventID, int stepID)
@@ -92,13 +112,23 @@ public class EventLog : MonoBehaviour
         {
             FlashText(flash);
             newHintText(flash);
+            menuButton.GetComponent<MenuButtonController>().newEventText();
         }
         return eventList[eventID].isComplete();
     }
+
     // checks if all steps in the event are completed
     public bool isComplete(int eventID)
     {
-        return eventList[eventID].isComplete();
+        if ( eventList.ContainsKey(eventID) )
+        {
+            return eventList[eventID].isComplete();
+        }
+        else
+        {
+            return false;
+        }
+      
     }
 
     public void FlashText(string flashText)
@@ -106,4 +136,16 @@ public class EventLog : MonoBehaviour
         flashingText.GetComponent<TextFlashScript>().Flash(flashText);
     }
     
+    // use this to turn on and off the interactible canvas when entering and exiting
+    // an interacible object's collider
+    public void TurnOnInteractibleCanvas(string text)
+    {
+        interactibleCanvas.SetActive(true);
+        interactibleCanvas.GetComponent<Text>().text = text;
+    }
+
+    public void TurnOffInteractibleCanvas()
+    {
+        interactibleCanvas.SetActive(false);
+    }
 }

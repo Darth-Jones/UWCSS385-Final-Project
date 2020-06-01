@@ -113,7 +113,7 @@ public class InteractionObject : MonoBehaviour
         if (completesEventStep)
         {
             emailSystem.GetComponent<EventLog>().StepCompleted(completeEventID, step);
-            completesEventStep = false;
+            //completesEventStep = false;
         }
         Debug.Log("Step Completed");
     }
@@ -124,7 +124,7 @@ public class InteractionObject : MonoBehaviour
         if (createEmail)
         {
             emailSystem.GetComponent<EventLog>().CreateEmail(emailID, emailHeader, emailBody, emailHintText);
-            createEmail = false;
+            //createEmail = false;
         }
         Debug.Log("Email Created");
     }
