@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level_Terry.unity
     guid: edb7404019ced4044a5e0da547158ada
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Floorplan_Donna.unity
     guid: 00fc4277ba1baef4b835b821ee76f0f7
+  - enabled: 1
+    path: Assets/Scenes/Floorplan_Terry.unity
+    guid: 9435310378ef3f34f97a1329015d16a3
   m_configObjects: {}

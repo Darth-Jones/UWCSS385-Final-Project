@@ -1,9 +1,9 @@
 {
 "companyName": "DefaultCompany",
 "productName": "Final-Project-Game",
-"dataUrl": "Unity Build.data.unityweb",
-"wasmCodeUrl": "Unity Build.wasm.code.unityweb",
-"wasmFrameworkUrl": "Unity Build.wasm.framework.unityweb",
+"dataUrl": "Terry_Build.data.unityweb",
+"wasmCodeUrl": "Terry_Build.wasm.code.unityweb",
+"wasmFrameworkUrl": "Terry_Build.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
