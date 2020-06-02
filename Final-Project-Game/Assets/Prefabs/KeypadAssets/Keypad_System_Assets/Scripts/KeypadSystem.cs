@@ -16,6 +16,12 @@ public class KeypadSystem : MonoBehaviour
     private bool lastReached = false; // keeps track of if max was reached
     public GameObject door;
     public DoorScript doorScript;
+    public GameObject camera;
+    public Transform cameraTransform;
+    public bool transfer;
+    public int step = 0;
+    public GameObject interactionObject;
+    public InteractionObject interactionObjectScript;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +40,8 @@ public class KeypadSystem : MonoBehaviour
         }
         numSprites =  Resources.LoadAll<Sprite>("Keypad_System_Assets/Display_Numbers");
         doorScript = door.GetComponent<DoorScript>();
+        cameraTransform = camera.GetComponent<Transform>();
+        interactionObjectScript =  interactionObject.GetComponent<InteractionObject>();
     }
 
     // Update is called once per frame
@@ -41,11 +49,13 @@ public class KeypadSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
             UpdateKeyPadDisplay();
+        transform.position = new Vector3(cameraTransform.position.x, cameraTransform.position.y, 0);
     }
 
     //Adds a number press to the Keypad
     public void ProcessNumberPress(int inputNumber)
     {
+        
         if (!lastReached) {
             if(numbers.Length <= maxNumbers)
             {
@@ -64,6 +74,7 @@ public class KeypadSystem : MonoBehaviour
             UpdateKeyPadDisplay();
         }
     }
+    
 
     //updates the sprites to display
     void UpdateKeyPadDisplay()
@@ -94,22 +105,49 @@ public class KeypadSystem : MonoBehaviour
         int i = 0;
         if(doorScript != null) {
             foreach(int number in numbers) {
-                if (number != doorScript.keyCode[i]) {
+                if (number != doorScript.keyCode[0, i]) {
                     correct = false;
                     break;
                 }
                 i++;
             }
             if (correct) {
-                doorScript.enabled = false;
+                    doorScript.enabled = false;
             
-                Debug.Log("Opened");
-                this.gameObject.SetActive(false);
+                    Debug.Log("Opened");
+                    this.gameObject.SetActive(false);
             }
         }
+    }
 
         //if (numbers == trigger.expectedNums) {
             //  Perform Trigger
         //}
+    
+    public void ReceiveKeyPressed() 
+    {
+        
+        if(doorScript != null) {
+            Debug.Log("Running");
+            for(step = 0; step < interactionObjectScript.stepCount; step++) {
+                int i = 0;
+                bool correct = true;
+                Debug.Log("Outer loop");
+                foreach(int number in numbers) {
+                    Debug.Log("Inner Loop)");
+                    Debug.Log(doorScript.keyCode[step, i]);
+                    if (number != doorScript.keyCode[step, i]) {
+                        correct = false;
+                    }
+                    i++;
+                }
+                if (correct) {
+                    interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(interactionObjectScript.eventID, step);
+                    //Perform step in interaction
+                    Debug.Log("Good Code, Step = " + step);
+                }
+                else Debug.Log("Incorrect Code");
+            }
+        }
     }
 }
