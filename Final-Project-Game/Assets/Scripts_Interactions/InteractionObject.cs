@@ -10,13 +10,19 @@ public class InteractionObject : MonoBehaviour
 
     [Header("Interaction Options")]
     public bool displayObjectOnClick = false;
+    public bool removeObjectOnClick = true;
     public bool displayUIText = false;
     public string UIText;
-    public bool createEmailOrEventOnTouch = false;
+    public bool interactOnTouch = false;
     public bool createEmail = false;
     public bool creatEvent = false;
     public bool repeatInteraction = false;
     private bool interactedWith = false;
+
+    [Header("Enviroment Effects")]
+    public bool turnsOffLights = false;
+    public bool turnsOnLights = false;
+    public bool cameraShake = false;
 
     [Header("Requires Perquisite Event")]
     public bool requiresEventCheck = false;
@@ -43,11 +49,11 @@ public class InteractionObject : MonoBehaviour
     //Trigger Types: enter, exit, and click
     public void Triggered(string trigger)
     {
-        eventCheck = true;
+        bool eventCheck = true;
 
         if (requiresEventCheck)
 		{
-            eventCheck = emailSystem.GetComponent<EventLog>().IsCompleted(eventIDRequired);
+            eventCheck = emailSystem.GetComponent<EventLog>().isComplete(eventIDRequired);
 		}
          
 
@@ -60,13 +66,23 @@ public class InteractionObject : MonoBehaviour
                 Debug.Log("Interaction exit");
                 if (displayUIText)
                     DisplayUIText();
-                if (createEmailOrEventOnTouch && eventCheck)
+                if (interactOnTouch && eventCheck)
                 {
                     if (createEmail)
                         CreateEmail();
 
                     if (creatEvent)
                         CreateEvent();
+
+                    if (turnsOnLights)
+                        Debug.Log("Lights On");
+
+                    if (turnsOffLights)
+                        Debug.Log("Lights On");
+
+                    if (cameraShake)
+                        Debug.Log("Camera Shake");
+
                     interactedWith = true;
                 }
 
@@ -81,7 +97,7 @@ public class InteractionObject : MonoBehaviour
                     RemoveObject();
 
             }
-            else if (trigger == "click" && eventCheck)
+            else if (trigger == "click" && eventCheck && !interactedWith)
             {
                 interactedWith = true;
 
@@ -96,6 +112,11 @@ public class InteractionObject : MonoBehaviour
 
                 if (displayObjectOnClick)
                     DisplayObject();
+
+                if (removeObjectOnClick)
+                    RemoveObject();
+                
+
             }
         }
         if (repeatInteraction)
