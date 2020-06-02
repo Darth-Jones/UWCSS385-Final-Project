@@ -63,7 +63,7 @@ public class InteractionObject : MonoBehaviour
 
             if (trigger == "enter")
             {
-                Debug.Log("Interaction exit");
+                Debug.Log("Interaction Enter");
                 if (displayUIText)
                     DisplayUIText();
                 if (interactOnTouch && eventCheck)
@@ -130,6 +130,7 @@ public class InteractionObject : MonoBehaviour
     void DisplayUIText()
     {
         //need to implement UI Object to display
+        //Debug.Log(UIText);
         emailSystem.GetComponent<EventLog>().TurnOnInteractibleCanvas(UIText);
     }
 

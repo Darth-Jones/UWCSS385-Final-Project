@@ -30,7 +30,7 @@ public class KeypadSystem : MonoBehaviour
         displayNumbers = new List<GameObject>(GameObject.FindGameObjectsWithTag("DisplayNumber"));
         sortedDisplayNumbers = displayNumbers.OrderBy(displayNumber => displayNumber.transform.position.x).ToList();
         numberToDisplay = new SpriteRenderer[maxNumbers];
-        numSprites =  Resources.LoadAll<Sprite>("Keypad_System_Assets/Display_Numbers");
+        numSprites =  Resources.LoadAll<Sprite>("/Prefabs/Keypad_System_Assets/Display_Numbers");
         for(int i = 0; i < sortedDisplayNumbers.Count; i++ ) {
             numberToDisplay[i] = sortedDisplayNumbers[i].GetComponent<SpriteRenderer>();
             Debug.Log(numberToDisplay[i]);
@@ -82,7 +82,7 @@ public class KeypadSystem : MonoBehaviour
         //Updates all the numbers with the sprites
         int i = 0;
         foreach (int number in numbers) {
-            numberToDisplay[i].sprite = numSprites[number];
+            numberToDisplay[i].sprite = numSprites[number*2];
             i++;
             Debug.Log(number);
             lastReached = false;

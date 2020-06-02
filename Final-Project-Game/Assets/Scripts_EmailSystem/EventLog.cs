@@ -8,6 +8,8 @@ using System.Transactions;
 public class EventLog : MonoBehaviour
 {
 
+    //[SerializeField]
+    //private GameObject interactableText;
     //public bool readchedA = false;
 
     public LinkedList<string> checkPointText;
@@ -138,14 +140,19 @@ public class EventLog : MonoBehaviour
     
     // use this to turn on and off the interactible canvas when entering and exiting
     // an interacible object's collider
-    public void TurnOnInteractibleCanvas(string text)
+    public void TurnOnInteractibleCanvas(string newText)
     {
-        interactibleCanvas.SetActive(true);
-        interactibleCanvas.GetComponent<Text>().text = text;
+        
+        Debug.Log("newText: " + newText);
+        gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        /*
+        interactableText.GetComponent<Text>().text = newText;
+        */
     }
 
     public void TurnOffInteractibleCanvas()
     {
+        Debug.Log("Turning off canvas");
         interactibleCanvas.SetActive(false);
     }
 }

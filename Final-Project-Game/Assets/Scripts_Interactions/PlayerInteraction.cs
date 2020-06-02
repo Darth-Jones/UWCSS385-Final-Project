@@ -12,7 +12,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (inInteractionZone)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 InteractionObject interactionScript = interactionObject.GetComponent<InteractionObject>();
                 interactionScript.Triggered("click");

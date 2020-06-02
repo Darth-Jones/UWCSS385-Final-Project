@@ -116,16 +116,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  emailSystem: {fileID: 0}
-  displayObjectOnClick: 1
+  emailSystem: {fileID: 5587859344226057199, guid: 705049d46034f4b47ab353fbbd97e7d4,
+    type: 3}
+  displayObjectOnClick: 0
+  removeObjectOnClick: 0
   displayUIText: 1
   UIText: 
-  createEmailOrEventOnTouch: 0
+  interactOnTouch: 0
   createEmail: 0
   creatEvent: 0
-  repeatInteraction: 1
-  requiresEventAccomplishment: 0
-  eventNumberRequired: 0
+  repeatInteraction: 0
+  turnsOffLights: 0
+  turnsOnLights: 0
+  cameraShake: 0
+  requiresEventCheck: 0
+  eventIDRequired: 0
   emailID: 0
   emailHeader: 
   emailBody: 
