@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonAdd : MonoBehaviour
+public class EnterButtonFuseBox : MonoBehaviour
 {
-    public int buttonNumber = 0;
     private KeypadSystem keypadSystem;
 
     private void Start()
@@ -16,8 +15,8 @@ public class ButtonAdd : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("click " + buttonNumber);
-            keypadSystem.ProcessNumberPress(buttonNumber);
+            Debug.Log("click Enter");
+            keypadSystem.EnterKeyPressed();
         }     
     }
 }

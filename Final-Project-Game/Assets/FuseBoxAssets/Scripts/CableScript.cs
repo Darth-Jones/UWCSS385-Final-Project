@@ -21,7 +21,8 @@ public class CableScript : MonoBehaviour
     private Vector3 endPos;
     private Camera camera;
     private LineRenderer lineRenderer;
-    public Color lineColor;
+    private SpriteRenderer spriteRenderer;
+    private Color lineColor;
     Vector3 camOffset = new Vector3(0, 0, 10);
     [SerializeField] private AnimationCurve ac;
 
@@ -47,6 +48,10 @@ public class CableScript : MonoBehaviour
     public static int numberNeeded2;
     public static int numberNeeded3;
 
+    public int number1;
+    public int number2;
+    public int number3;
+
     private Vector3 scaleUp;
     private Vector3 scaleDown;
 
@@ -61,16 +66,22 @@ public class CableScript : MonoBehaviour
         scaleUp = new Vector3(10, 10, 10);
         scaleDown = new Vector3(transform.localScale.x,
             transform.localScale.y, transform.localScale.z);
+        lineRenderer = GetComponent<LineRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        lineColor = spriteRenderer.color;
+        numberNeeded1 = number1;
+        numberNeeded2 = number2;
+        numberNeeded3 = number3;
     }
 
     void Update()
     {
-        if (totalTile1 == numberNeeded1 && totalTile2 == numberNeeded2
-            && totalTile3 == numberNeeded3)
-        {
-            // Do something here
-            Debug.Log("PUZZLE SOLVED");
-        }
+        //if (totalTile1 == numberNeeded1 && totalTile2 == numberNeeded2
+        //    && totalTile3 == numberNeeded3)
+        //{
+        //    // Do something here
+        //    Debug.Log("PUZZLE SOLVED");
+        //}
     }
 
     private void OnMouseDown()
@@ -133,6 +144,7 @@ public class CableScript : MonoBehaviour
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = leftTilePort1Taken = true;
                     totalTile1 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
                 else if ((leftTilePort1Taken == true) && (leftTilePort2Taken == false)
                     && (leftTilePort2Taken == false))
@@ -142,6 +154,7 @@ public class CableScript : MonoBehaviour
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = leftTilePort2Taken = true;
                     totalTile1 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
                 else
                 {
@@ -150,6 +163,7 @@ public class CableScript : MonoBehaviour
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = leftTilePort3Taken = true;
                     totalTile1 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
 
             }
@@ -163,7 +177,8 @@ public class CableScript : MonoBehaviour
                     endPos = new Vector2(midTilePosition.position.x - 2.5f, midTilePosition.position.y - 4);
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = midTilePort1Taken = true;
-                    totalTile3 += myValue;
+                    totalTile2 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
                 else if ((midTilePort1Taken == true) && (midTilePort2Taken == false)
                     && (midTilePort3Taken == false))
@@ -172,8 +187,8 @@ public class CableScript : MonoBehaviour
                     endPos = new Vector2(midTilePosition.position.x, midTilePosition.position.y - 4);
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = midTilePort2Taken = true;
-                    totalTile3 += myValue;
-
+                    totalTile2 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
                 else
                 {
@@ -181,8 +196,8 @@ public class CableScript : MonoBehaviour
                     endPos = new Vector2(midTilePosition.position.x + 2.5f, midTilePosition.position.y - 4);
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = midTilePort3Taken = true;
-                    totalTile3 += myValue;
-
+                    totalTile2 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
             }
             else if (Mathf.Abs(transform.position.x - rightTilePosition.position.x) <= 5f &&
@@ -195,8 +210,8 @@ public class CableScript : MonoBehaviour
                     endPos = new Vector2(rightTilePosition.position.x - 2.5f, rightTilePosition.position.y - 4);
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = rightTilePort1Taken = true;
-                    totalTile2 += myValue;
-
+                    totalTile3 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
                 else if ((rightTilePort1Taken == true) && (rightilePort2Taken == false)
                     && (rightTilePort3Taken == false))
@@ -205,8 +220,8 @@ public class CableScript : MonoBehaviour
                     endPos = new Vector2(rightTilePosition.position.x, rightTilePosition.position.y - 4);
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = rightilePort2Taken = true;
-                    totalTile2 += myValue;
-
+                    totalTile3 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
                 else
                 {
@@ -214,7 +229,8 @@ public class CableScript : MonoBehaviour
                     endPos = new Vector2(rightTilePosition.position.x + 2.5f, rightTilePosition.position.y - 4);
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = rightTilePort3Taken = true;
-                    totalTile2 += myValue;
+                    totalTile3 += myValue;
+                    Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
 
             }
@@ -242,6 +258,7 @@ public class CableScript : MonoBehaviour
     }
 
     public static void ResetVariables() {
+        Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
         totalTile1 -= totalTile1;
         totalTile2 -= totalTile2;
         totalTile3 -= totalTile3;
