@@ -3902,7 +3902,7 @@ PrefabInstance:
     - target: {fileID: 1635857054982851249, guid: 6a0f28e7b92d741288c1b6cd60d21c42,
         type: 3}
       propertyPath: emailBody
-      value: Thing
+      value: Donnas code is 7891234
       objectReference: {fileID: 0}
     - target: {fileID: 1635857054982851249, guid: 6a0f28e7b92d741288c1b6cd60d21c42,
         type: 3}
@@ -4230,6 +4230,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 517864876, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numberStrings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 517864876, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numbers
+      value: 7891234
+      objectReference: {fileID: 0}
+    - target: {fileID: 517864876, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numberStrings.Array.data[0]
+      value: 7891234
+      objectReference: {fileID: 0}
     - target: {fileID: 1884675204, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
       propertyPath: numbers
       value: 1234567
