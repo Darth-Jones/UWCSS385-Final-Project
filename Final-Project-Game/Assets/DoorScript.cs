@@ -6,27 +6,31 @@ public class DoorScript : MonoBehaviour
 {
 
     public bool enabled = true;
-    public int[] keyCode;
+    public int[,] keyCode;
+    public string[] numberStrings;
     public string numbers = "0000000";
-    public int firstNum;
-    public int secondNum;
-    public int thirdNum;
-    public int fourthNum;
-    public int fifthNum;
-    public int sixthNum;
-    public int seventhNum;
+    public string numbers2 = "0000000";
+    public string numbers3 = "0000000";
+    public int numNumberStrings = 1;
 
     public char[] numChars;
     // Start is called before the first frame update
     void Start()
     {
-        numChars = numbers.ToCharArray(0,numbers.Length);
-        int i = 0;
-        keyCode = new int[numbers.Length];
-        foreach(char num in numChars) {
-            keyCode[i] = num - 48;
-            Debug.Log("Keycode" + i + " = " + keyCode[i] );
-            i++;
+        keyCode = new int[numNumberStrings,numbers.Length];
+        int j = 0;
+        foreach (string nums in numberStrings) {
+            
+            numChars = nums.ToCharArray(0,nums.Length);
+            
+            
+            int i = 0;
+            foreach(char num in numChars) {
+                keyCode[j, i] = num - 48;
+                Debug.Log("Keycode" + i + " = " + keyCode[j, i] );
+                i++;
+            }
+            j++;
         }
     }
 
