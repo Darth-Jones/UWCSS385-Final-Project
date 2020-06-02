@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 
-public class KeypadSystem : MonoBehaviour
+public class KeypadSystemFuseBox : MonoBehaviour
 {
     public int maxNumbers = 7; //The count of input numbers
     private int[] numbers; // actual numbers in array

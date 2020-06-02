@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearButton : MonoBehaviour
+public class ClearButtonFuseBox : MonoBehaviour
 {
     private KeypadSystem keypadSystem;
 
