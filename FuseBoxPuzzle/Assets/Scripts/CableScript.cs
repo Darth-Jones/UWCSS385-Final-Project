@@ -43,9 +43,9 @@ public class CableScript : MonoBehaviour
     public static int totalTile2;
     public static int totalTile3;
 
-    public int numberNeeded1;
-    public int numberNeeded2;
-    public int numberNeeded3;
+    public static int numberNeeded1;
+    public static int numberNeeded2;
+    public static int numberNeeded3;
 
     private Vector3 scaleUp;
     private Vector3 scaleDown;
