@@ -4,35 +4,36 @@ using UnityEngine;
 
 public class InteractionObject : MonoBehaviour
 {
-    //Interaction Options
+    [Header("Object Connections")]
     public GameObject interactable;
     public GameObject emailSystem;
+
+    [Header("Interaction Options")]
     public bool displayObjectOnClick = false;
     public bool displayUIText = false;
     public string UIText;
-    public bool createEmailOrEventOnTouch =false;
+    public bool createEmailOrEventOnTouch = false;
     public bool createEmail = false;
     public bool creatEvent = false;
     public bool repeatInteraction = false;
     private bool interactedWith = false;
 
-    
+    [Header("Requires Perquisite Event")]
+    public bool requiresEventCheck = false;
+    public int eventIDRequired;
 
-    public bool requiresEventAccomplishment = false;
-    public int eventNumberRequired;
-
-    //Email Creation Options
+    [Header("Email Creation Options")]
     public int emailID;
     public string emailHeader;
     public string emailBody;
     public string emailHintText;
 
-    //Event Creation Options
+    [Header("Event Creation Options")]
     public int eventID;
     public int stepCount;
     public string[] eventHintText;
 
-    //Event Completetion Options
+    [Header("Event Completetion Options")]
     public bool completesEventStep;
     public int completeEventID;
     public int step;
@@ -42,7 +43,14 @@ public class InteractionObject : MonoBehaviour
     //Trigger Types: enter, exit, and click
     public void Triggered(string trigger)
     {
-        
+        eventCheck = true;
+
+        if (requiresEventCheck)
+		{
+            eventCheck = emailSystem.GetComponent<EventLog>().IsCompleted(eventIDRequired);
+		}
+         
+
         if (!(interactedWith))
         {
             
@@ -52,7 +60,7 @@ public class InteractionObject : MonoBehaviour
                 Debug.Log("Interaction exit");
                 if (displayUIText)
                     DisplayUIText();
-                if (createEmailOrEventOnTouch)
+                if (createEmailOrEventOnTouch && eventCheck)
                 {
                     if (createEmail)
                         CreateEmail();
@@ -73,7 +81,7 @@ public class InteractionObject : MonoBehaviour
                     RemoveObject();
 
             }
-            else if (trigger == "click")
+            else if (trigger == "click" && eventCheck)
             {
                 interactedWith = true;
 
