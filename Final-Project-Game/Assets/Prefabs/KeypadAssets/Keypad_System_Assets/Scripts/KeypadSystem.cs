@@ -22,6 +22,12 @@ public class KeypadSystem : MonoBehaviour
     public int step = 0;
     public GameObject interactionObject;
     public InteractionObject interactionObjectScript;
+    public int[] itemGatheredEventID;
+    public int[] receivedEventID;
+    public int[] emailIDs;
+    public string[] emailHeaders;
+    public string[] emailBody;
+    public string[] emailHint;
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +88,7 @@ public class KeypadSystem : MonoBehaviour
         //Updates all the numbers with the sprites
         int i = 0;
         foreach (int number in numbers) {
-            numberToDisplay[i].sprite = numSprites[number*2];
+            numberToDisplay[i].sprite = numSprites[number];
             i++;
             Debug.Log(number);
             lastReached = false;
@@ -101,21 +107,38 @@ public class KeypadSystem : MonoBehaviour
     //processes the number and checks if correct
     public void EnterKeyPressed()
     {
-        bool correct = true;
-        int i = 0;
-        if(doorScript != null) {
-            foreach(int number in numbers) {
-                if (number != doorScript.keyCode[0, i]) {
-                    correct = false;
+        if(transfer) {
+            int i = 0;
+            foreach(int eventID in itemGatheredEventID) {
+                if(interactionObjectScript.emailSystem.GetComponent<EventLog>().isComplete(eventID)) {
+
+                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEvent();
+                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().CompleteEvent();
+                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(receivedEventID, step);
+                    interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEmail(emailIDs[i], emailHeaders[i], emailBody[i], emailHint[i]);
+
                     break;
                 }
-                i++;
             }
-            if (correct) {
-                    doorScript.enabled = false;
-            
-                    Debug.Log("Opened");
-                    this.gameObject.SetActive(false);
+
+        }
+        else{
+            bool correct = true;
+            int i = 0;
+            if(doorScript != null) {
+                foreach(int number in numbers) {
+                    if (number != doorScript.keyCode[0, i]) {
+                        correct = false;
+                        break;
+                    }
+                    i++;
+                }
+                if (correct) {
+                        doorScript.enabled = false;
+                
+                        Debug.Log("Opened");
+                        this.gameObject.SetActive(false);
+                }
             }
         }
     }
@@ -141,8 +164,11 @@ public class KeypadSystem : MonoBehaviour
                     }
                     i++;
                 }
+                int j = 0;
                 if (correct) {
-                    interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(interactionObjectScript.eventID, step);
+                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(interactionObjectScript.eventID, step);
+                    interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEvent(receivedEventID[j], 1, emailHint);
+                    interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEmail(emailIDs[j], emailHeaders[j], emailBody[j], emailHint[j]);
                     //Perform step in interaction
                     Debug.Log("Good Code, Step = " + step);
                 }

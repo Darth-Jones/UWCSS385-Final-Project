@@ -9,10 +9,16 @@ public class Reset : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite OGSprite;
     public Sprite newSprite;
+    public GameObject fusebox;
+    public GameObject target;
+
+    public List<GameObject> cables;
+
 
     public void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        cables = new List<GameObject>(GameObject.FindGameObjectsWithTag("Cable"));
     }
 
     // Method to reset a scene
@@ -21,8 +27,12 @@ public class Reset : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             spriteRenderer.sprite = OGSprite;
-            SceneManager.LoadScene(sceneName);
-            CableScript.ResetVariables();
+            //SceneManager.LoadScene(sceneName);
+            foreach (GameObject cable in cables) {
+                cable.GetComponent<CableScript>().resetItem();
+            }
+            
+            
         }
     }
 

@@ -144,7 +144,7 @@ public class EventLog : MonoBehaviour
     {
         
         Debug.Log("newText: " + newText);
-        gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        interactibleCanvas.SetActive(true);
         /*
         interactableText.GetComponent<Text>().text = newText;
         */

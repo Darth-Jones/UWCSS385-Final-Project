@@ -54,6 +54,7 @@ public class CableScript : MonoBehaviour
 
     private Vector3 scaleUp;
     private Vector3 scaleDown;
+    public float totalScale;
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +73,7 @@ public class CableScript : MonoBehaviour
         numberNeeded1 = number1;
         numberNeeded2 = number2;
         numberNeeded3 = number3;
+        lineRenderer.sortingLayerName = "Keypad";
     }
 
     void Update()
@@ -84,6 +86,21 @@ public class CableScript : MonoBehaviour
             Debug.Log("PUZZLE SOLVED");
         }
         */
+        if( Input.GetKeyDown(KeyCode.R)) {
+            resetItem();
+        }
+    }
+
+    public void resetItem() {
+            lineRenderer.enabled = false;
+            transform.position = new Vector2(initialPosition.x, initialPosition.y);
+            locked = lineLocked = false;
+
+            ResetVariables();
+
+            leftTilePort1Taken = leftTilePort2Taken = leftTilePort3Taken = false;
+            midTilePort1Taken = midTilePort2Taken = midTilePort3Taken = false;
+            rightTilePort1Taken = rightilePort2Taken = rightTilePort3Taken = false;
     }
 
     private void OnMouseDown()
@@ -101,7 +118,7 @@ public class CableScript : MonoBehaviour
                     lineRenderer.material.color = Color.white;
                     lineRenderer.material.color = lineColor;
                 }
-                Vector2 cablePos = new Vector2(initialPosition.x, initialPosition.y - 3);
+                Vector2 cablePos = new Vector2(initialPosition.x, initialPosition.y - (3 * totalScale));
                 lineRenderer.positionCount = 2;
                 startPos = cablePos;
                 lineRenderer.SetPosition(0, startPos);
@@ -109,8 +126,8 @@ public class CableScript : MonoBehaviour
 
                 lineRenderer.enabled = true;
 
-                //lr.widthCurve = ac;
-                //lr.numCapVertices = 10;
+                lineRenderer.widthCurve = ac;
+                lineRenderer.numCapVertices = 10;
             }
         }
     }
@@ -135,14 +152,14 @@ public class CableScript : MonoBehaviour
         transform.localScale = scaleDown;
         if (!locked)
         {
-            if (Mathf.Abs(transform.position.x - leftTilePosition.position.x) <= 5f &&
-                Mathf.Abs(transform.position.y - leftTilePosition.position.y) <= 5f)
+            if (Mathf.Abs(transform.position.x - leftTilePosition.position.x) <= (5.0f * totalScale) &&
+                Mathf.Abs(transform.position.y - leftTilePosition.position.y) <= (5.0f * totalScale))
             {
                 if ((leftTilePort1Taken == false) && (leftTilePort2Taken == false)
                     && (leftTilePort3Taken == false))
                 {
-                    transform.position = new Vector2(leftTilePosition.position.x - 2.5f, leftTilePosition.position.y - 4);
-                    endPos = new Vector2(leftTilePosition.position.x - 2.5f, leftTilePosition.position.y - 4);
+                    transform.position = new Vector2(leftTilePosition.position.x - (2.5f * totalScale), leftTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(leftTilePosition.position.x - (2.5f * totalScale), leftTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = leftTilePort1Taken = true;
                     totalTile1 += myValue;
@@ -151,8 +168,8 @@ public class CableScript : MonoBehaviour
                 else if ((leftTilePort1Taken == true) && (leftTilePort2Taken == false)
                     && (leftTilePort2Taken == false))
                 {
-                    transform.position = new Vector2(leftTilePosition.position.x, leftTilePosition.position.y - 4);
-                    endPos = new Vector2(leftTilePosition.position.x, leftTilePosition.position.y - 4);
+                    transform.position = new Vector2(leftTilePosition.position.x, leftTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(leftTilePosition.position.x, leftTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = leftTilePort2Taken = true;
                     totalTile1 += myValue;
@@ -160,8 +177,8 @@ public class CableScript : MonoBehaviour
                 }
                 else
                 {
-                    transform.position = new Vector2(leftTilePosition.position.x + 2.5f, leftTilePosition.position.y - 4);
-                    endPos = new Vector2(leftTilePosition.position.x + 2.5f, leftTilePosition.position.y - 4);
+                    transform.position = new Vector2(leftTilePosition.position.x + (2.5f * totalScale), leftTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(leftTilePosition.position.x + (2.5f * totalScale), leftTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = leftTilePort3Taken = true;
                     totalTile1 += myValue;
@@ -169,14 +186,14 @@ public class CableScript : MonoBehaviour
                 }
 
             }
-            else if (Mathf.Abs(transform.position.x - midTilePosition.position.x) <= 5f &&
-                    Mathf.Abs(transform.position.y - midTilePosition.position.y) <= 5f)
+            else if (Mathf.Abs(transform.position.x - midTilePosition.position.x) <= (5.0f * totalScale) &&
+                    Mathf.Abs(transform.position.y - midTilePosition.position.y) <= (5.0f * totalScale))
             {
                 if ((midTilePort1Taken == false) && (midTilePort2Taken == false)
                     && (midTilePort3Taken == false))
                 {
-                    transform.position = new Vector2(midTilePosition.position.x - 2.5f, midTilePosition.position.y - 4);
-                    endPos = new Vector2(midTilePosition.position.x - 2.5f, midTilePosition.position.y - 4);
+                    transform.position = new Vector2(midTilePosition.position.x - (2.5f * totalScale), midTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(midTilePosition.position.x - (2.5f * totalScale), midTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = midTilePort1Taken = true;
                     totalTile2 += myValue;
@@ -185,8 +202,8 @@ public class CableScript : MonoBehaviour
                 else if ((midTilePort1Taken == true) && (midTilePort2Taken == false)
                     && (midTilePort3Taken == false))
                 {
-                    transform.position = new Vector2(midTilePosition.position.x, midTilePosition.position.y - 4);
-                    endPos = new Vector2(midTilePosition.position.x, midTilePosition.position.y - 4);
+                    transform.position = new Vector2(midTilePosition.position.x, midTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(midTilePosition.position.x, midTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = midTilePort2Taken = true;
                     totalTile2 += myValue;
@@ -194,22 +211,22 @@ public class CableScript : MonoBehaviour
                 }
                 else
                 {
-                    transform.position = new Vector2(midTilePosition.position.x + 2.5f, midTilePosition.position.y - 4);
-                    endPos = new Vector2(midTilePosition.position.x + 2.5f, midTilePosition.position.y - 4);
+                    transform.position = new Vector2(midTilePosition.position.x + (2.5f * totalScale), midTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(midTilePosition.position.x + (2.5f * totalScale), midTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = midTilePort3Taken = true;
                     totalTile2 += myValue;
                     Debug.Log(totalTile1 + ", " + totalTile2 + ", " + totalTile3);
                 }
             }
-            else if (Mathf.Abs(transform.position.x - rightTilePosition.position.x) <= 5f &&
-                Mathf.Abs(transform.position.y - rightTilePosition.position.y) <= 5f)
+            else if (Mathf.Abs(transform.position.x - rightTilePosition.position.x) <= (5.0f * totalScale) &&
+                Mathf.Abs(transform.position.y - rightTilePosition.position.y) <= (5.0f * totalScale))
             {
                 if ((rightTilePort1Taken == false) && (rightilePort2Taken == false)
                     && (rightTilePort3Taken == false))
                 {
-                    transform.position = new Vector2(rightTilePosition.position.x - 2.5f, rightTilePosition.position.y - 4);
-                    endPos = new Vector2(rightTilePosition.position.x - 2.5f, rightTilePosition.position.y - 4);
+                    transform.position = new Vector2(rightTilePosition.position.x - (2.5f * totalScale), rightTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(rightTilePosition.position.x - (2.5f * totalScale), rightTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = rightTilePort1Taken = true;
                     totalTile3 += myValue;
@@ -218,8 +235,8 @@ public class CableScript : MonoBehaviour
                 else if ((rightTilePort1Taken == true) && (rightilePort2Taken == false)
                     && (rightTilePort3Taken == false))
                 {
-                    transform.position = new Vector2(rightTilePosition.position.x, rightTilePosition.position.y - 4);
-                    endPos = new Vector2(rightTilePosition.position.x, rightTilePosition.position.y - 4);
+                    transform.position = new Vector2(rightTilePosition.position.x, rightTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(rightTilePosition.position.x, rightTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = rightilePort2Taken = true;
                     totalTile3 += myValue;
@@ -227,8 +244,8 @@ public class CableScript : MonoBehaviour
                 }
                 else
                 {
-                    transform.position = new Vector2(rightTilePosition.position.x + 2.5f, rightTilePosition.position.y - 4);
-                    endPos = new Vector2(rightTilePosition.position.x + 2.5f, rightTilePosition.position.y - 4);
+                    transform.position = new Vector2(rightTilePosition.position.x + (2.5f * totalScale), rightTilePosition.position.y - (4.0f * totalScale));
+                    endPos = new Vector2(rightTilePosition.position.x + (2.5f * totalScale), rightTilePosition.position.y - (4.0f * totalScale));
                     lineRenderer.SetPosition(1, endPos);
                     locked = lineLocked = rightTilePort3Taken = true;
                     totalTile3 += myValue;

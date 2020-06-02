@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Email_System_Test_Scene.unity
     guid: a4a7836279e4ca145ba6ea4fb92cc4d5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_Terry.unity
     guid: edb7404019ced4044a5e0da547158ada
+  - enabled: 1
+    path: Assets/Scenes/Floorplan_Donna.unity
+    guid: 00fc4277ba1baef4b835b821ee76f0f7
   m_configObjects: {}
