@@ -5060,6 +5060,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 517864876, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numberStrings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 517864876, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numbers
+      value: 7891234
+      objectReference: {fileID: 0}
+    - target: {fileID: 517864876, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numberStrings.Array.data[0]
+      value: 7891234
+      objectReference: {fileID: 0}
+    - target: {fileID: 582732490, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numberStrings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 582732490, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numberStrings.Array.data[0]
+      value: 4444222
+      objectReference: {fileID: 0}
+    - target: {fileID: 582732490, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
+      propertyPath: numbers
+      value: 4444222
+      objectReference: {fileID: 0}
     - target: {fileID: 1884675204, guid: f8cd73984bbdc1145b31c613c8f783a9, type: 3}
       propertyPath: numbers
       value: 1234567
