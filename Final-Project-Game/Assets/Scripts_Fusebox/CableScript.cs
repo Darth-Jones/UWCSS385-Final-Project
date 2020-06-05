@@ -20,9 +20,8 @@ public class CableScript : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
     private Camera camera;
-    private LineRenderer lineRenderer;
+    public LineRenderer lineRenderer;
     private SpriteRenderer spriteRenderer;
-    private Color lineColor;
     Vector3 camOffset = new Vector3(0, 0, 10);
     [SerializeField] private AnimationCurve ac;
 
@@ -69,7 +68,6 @@ public class CableScript : MonoBehaviour
             transform.localScale.y, transform.localScale.z);
         lineRenderer = GetComponent<LineRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        lineColor = spriteRenderer.color;
         numberNeeded1 = number1;
         numberNeeded2 = number2;
         numberNeeded3 = number3;
@@ -92,6 +90,7 @@ public class CableScript : MonoBehaviour
     }
 
     public void resetItem() {
+        Debug.Log("RESET");
             lineRenderer.enabled = false;
             transform.position = new Vector2(initialPosition.x, initialPosition.y);
             locked = lineLocked = false;
@@ -103,6 +102,7 @@ public class CableScript : MonoBehaviour
             rightTilePort1Taken = rightilePort2Taken = rightTilePort3Taken = false;
     }
 
+    [System.Obsolete]
     private void OnMouseDown()
     {
         if (!locked && !lineLocked)
@@ -115,19 +115,18 @@ public class CableScript : MonoBehaviour
                 if (lineRenderer == null)
                 {
                     lineRenderer = gameObject.AddComponent<LineRenderer>();
-                    lineRenderer.material.color = Color.white;
-                    lineRenderer.material.color = lineColor;
+                    
                 }
+
+                lineRenderer.enabled = true;
                 Vector2 cablePos = new Vector2(initialPosition.x, initialPosition.y - (3 * totalScale));
                 lineRenderer.positionCount = 2;
                 startPos = cablePos;
                 lineRenderer.SetPosition(0, startPos);
                 lineRenderer.useWorldSpace = true;
-
-                lineRenderer.enabled = true;
-
                 lineRenderer.widthCurve = ac;
                 lineRenderer.numCapVertices = 10;
+                
             }
         }
     }
