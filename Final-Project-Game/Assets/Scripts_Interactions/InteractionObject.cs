@@ -7,17 +7,18 @@ public class InteractionObject : MonoBehaviour
     [Header("Object Connections")]
     public GameObject interactable;
     public GameObject emailSystem;
+    public GameObject interactionCanvas;
 
     [Header("Interaction Options")]
     public bool displayObjectOnClick = false;
-    public bool removeObjectOnClick = true;
+    public bool removeObjectOnClick = false;
+    public bool removeInteractionOnClick = false;
     public bool displayUIText = false;
+    public bool displayAltUIText = false;
     public string UIText;
+    public string UIAltText;
     public bool interactOnTouch = false;
-    public bool createEmail = false;
-    public bool creatEvent = false;
     public bool repeatInteraction = false;
-    private bool interactedWith = false;
 
     [Header("Enviroment Effects")]
     public bool turnsOffLights = false;
@@ -29,12 +30,14 @@ public class InteractionObject : MonoBehaviour
     public int eventIDRequired;
 
     [Header("Email Creation Options")]
+    public bool createEmail = false;
     public int emailID;
     public string emailHeader;
     public string emailBody;
     public string emailHintText;
 
     [Header("Event Creation Options")]
+    public bool creatEvent = false;
     public int eventID;
     public int stepCount;
     public string[] eventHintText;
@@ -44,29 +47,39 @@ public class InteractionObject : MonoBehaviour
     public int completeEventID;
     public int step;
 
+    //Private Variables
+    private bool interactedWith = false;
+    private bool interactionRemoved = false;
+    private bool firstClick = true;
+
 
     //Determines type of trigger by using string
     //Trigger Types: enter, exit, and click
     public void Triggered(string trigger)
     {
-        bool eventCheck = true;
-
-        if (requiresEventCheck)
-		{
-            eventCheck = emailSystem.GetComponent<EventLog>().isComplete(eventIDRequired);
-		}
-         
-
-        if (!(interactedWith))
+        if (!interactionRemoved)
         {
-            
+            bool eventCheck = true;
+
+            if (requiresEventCheck)
+            {
+                eventCheck = emailSystem.GetComponent<EventLog>().isComplete(eventIDRequired);
+            }
+
 
             if (trigger == "enter")
             {
                 Debug.Log("Interaction Enter");
-                if (displayUIText)
+                if (displayUIText && !displayAltUIText)
                     DisplayUIText();
-                if (interactOnTouch && eventCheck)
+                else
+                {
+                    if (eventCheck)
+                        DisplayUIText();
+                    else
+                        DisplayAltUIText();
+                }
+                if (interactOnTouch && eventCheck && !interactedWith)
                 {
                     if (createEmail)
                         CreateEmail();
@@ -101,6 +114,7 @@ public class InteractionObject : MonoBehaviour
             {
                 interactedWith = true;
 
+
                 if (createEmail)
                     CreateEmail();
 
@@ -110,18 +124,34 @@ public class InteractionObject : MonoBehaviour
                 if (completesEventStep)
                     CompleteEventStep();
 
-                if (displayObjectOnClick)
+                if (displayObjectOnClick && firstClick)
+                {
                     DisplayObject();
+                    firstClick = false;
+                } else if (displayObjectOnClick && !firstClick)
+                {
+                    RemoveObject();
+                    firstClick = true;
+                }
 
                 if (removeObjectOnClick)
+                {
                     RemoveObject();
-                
+                    interactionRemoved = true;
+                    RemoveUIText();
+                }
+                if (removeInteractionOnClick)
+                {
+                    interactionRemoved = true;
+                    RemoveUIText();
+                }
 
             }
-        }
-        if (repeatInteraction)
-        {
-            interactedWith = false;
+
+            if (repeatInteraction)
+            {
+                interactedWith = false;
+            }
         }
 
     }
@@ -130,13 +160,20 @@ public class InteractionObject : MonoBehaviour
     void DisplayUIText()
     {
         //need to implement UI Object to display
-        //Debug.Log(UIText);
-        emailSystem.GetComponent<EventLog>().TurnOnInteractibleCanvas(UIText);
+        Debug.Log(UIText);
+        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
+    }
+
+    void DisplayAltUIText()
+    {
+        //need to implement UI Object to display
+        Debug.Log(UIText);
+        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
     }
 
     void RemoveUIText()
     {
-        emailSystem.GetComponent<EventLog>().TurnOffInteractibleCanvas();
+        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOff();
     }
 
     //Creates a new event for the objectives
