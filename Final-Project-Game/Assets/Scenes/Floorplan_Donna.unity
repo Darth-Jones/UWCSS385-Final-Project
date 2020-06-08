@@ -4276,6 +4276,16 @@ PrefabInstance:
       propertyPath: interactableText
       value: 
       objectReference: {fileID: 925834916}
+    - target: {fileID: 2062505145871907759, guid: 705049d46034f4b47ab353fbbd97e7d4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062505145871907759, guid: 705049d46034f4b47ab353fbbd97e7d4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2062505146688920208, guid: 705049d46034f4b47ab353fbbd97e7d4,
         type: 3}
       propertyPath: eventLog
@@ -4309,7 +4319,7 @@ PrefabInstance:
     - target: {fileID: 5544951903573312458, guid: 705049d46034f4b47ab353fbbd97e7d4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5587859344226057199, guid: 705049d46034f4b47ab353fbbd97e7d4,
         type: 3}
