@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TextFlashScript : MonoBehaviour
 {
 
-    private float dur = 2f;
+    public float dur = 5f;
     private float startTime = 0f;
     private float currentTime = 0f;
     private bool flash = false;
