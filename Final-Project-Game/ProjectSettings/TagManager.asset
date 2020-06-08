@@ -10,6 +10,8 @@ TagManager:
   - 29
   - 26
   - fusebox
+  - Cable
+  - incorrect
   layers:
   - Default
   - TransparentFX

@@ -28,6 +28,7 @@ public class KeypadSystem : MonoBehaviour
     public string[] emailHeaders;
     public string[] emailBody;
     public string[] emailHint;
+    public GameObject[] incorrect;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,8 @@ public class KeypadSystem : MonoBehaviour
         doorScript = door.GetComponent<DoorScript>();
         cameraTransform = camera.GetComponent<Transform>();
         interactionObjectScript =  interactionObject.GetComponent<InteractionObject>();
+        incorrect = GameObject.FindGameObjectsWithTag("incorrect");
+
     }
 
     // Update is called once per frame
@@ -124,10 +127,13 @@ public class KeypadSystem : MonoBehaviour
         }
         else{
             bool correct = true;
-            int i = 0;
             if(doorScript != null) {
-                foreach(int number in numbers) {
-                    if (number != doorScript.keyCode[0, i]) {
+                for( int i = 0; i < maxNumbers; i++) {
+                    if (numbers[i] == null) {
+                        correct = false;
+                        break;
+                    }
+                    if (numbers[i] != doorScript.keyCode[0, i]) {
                         correct = false;
                         break;
                     }
@@ -138,6 +144,15 @@ public class KeypadSystem : MonoBehaviour
                 
                         Debug.Log("Opened");
                         this.gameObject.SetActive(false);
+                }
+                else {
+                    numbers = new int[maxNumbers];
+                    numberLocation = 0;
+                    for(int i = 0; i < maxNumbers; i++) {
+                        numberToDisplay[i].sprite = numSprites[11];
+                    }
+                    numberToDisplay[maxNumbers/2].sprite = numSprites[10];
+                    Debug.Log("Incorrect");
                 }
             }
         }
@@ -152,6 +167,7 @@ public class KeypadSystem : MonoBehaviour
         
         if(doorScript != null) {
             Debug.Log("Running");
+            bool anycorrect = false;
             for(step = 0; step < interactionObjectScript.stepCount; step++) {
                 int i = 0;
                 bool correct = true;
@@ -171,9 +187,18 @@ public class KeypadSystem : MonoBehaviour
                     interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEmail(emailIDs[j], emailHeaders[j], emailBody[j], emailHint[j]);
                     //Perform step in interaction
                     Debug.Log("Good Code, Step = " + step);
+                    anycorrect = true;
                 }
-                else Debug.Log("Incorrect Code");
+            }
+            if (!anycorrect) {
+                    numbers = new int[maxNumbers];
+                    numberLocation = 0;
+                    for(int i = 0; i < maxNumbers; i++) {
+                        numberToDisplay[i].sprite = numSprites[11];
+                    }
+                    numberToDisplay[maxNumbers/2].sprite = numSprites[10];
+                    Debug.Log("Incorrect");
+                }
             }
         }
     }
-}
