@@ -12,6 +12,7 @@ TagManager:
   - fusebox
   - Cable
   - incorrect
+  - darkUI
   layers:
   - Default
   - TransparentFX
