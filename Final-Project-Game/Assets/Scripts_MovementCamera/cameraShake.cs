@@ -27,8 +27,10 @@ public class cameraShake : MonoBehaviour
     public int startMaze = 1;
     public int endMaze = 52;
     private bool shook = false;
-    private RectTransform size; 
+    private RectTransform UIsize; 
     public bool visible = true;
+    public bool lightOn = true;
+
 
     // Start is called before the first frame update
 
@@ -39,7 +41,7 @@ public class cameraShake : MonoBehaviour
         cameraScript = cameraObject.GetComponent<cameraFollowScript2>();
         darkUI = GameObject.FindGameObjectsWithTag("darkUI")[0];
         image = darkUI.GetComponent<RawImage>();
-        size = darkUI.GetComponent<RectTransform>();
+        UIsize = darkUI.GetComponent<RectTransform>();
         i = 0;
         j = 30;
         frameCounter = 0;
@@ -50,7 +52,8 @@ public class cameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (lightOn) lighten();
+        else darken();
         cameraOrigPos = cameraScript.expectedPos;
 
         frameCounter++;
@@ -86,20 +89,25 @@ public class cameraShake : MonoBehaviour
             
         }
 
-        Debug.Log("StartShake = " + startShake + " EndShake = " + endShake + " frameCounter = " + frameCounter + " i = " + i + " j = " + j);
+        //Debug.Log("StartShake = " + startShake + " EndShake = " + endShake + " frameCounter = " + frameCounter + " i = " + i + " j = " + j);
         
     }
 
     public void lighten() {
-        if (size.sizeDelta.x < 5) {
-            size.sizeDelta = new Vector2(size.sizeDelta.x += .05, size.sizeDelta.y += .05, 1);
+        //Debug.Log(" LOCAL SCALE: " +UIsize.localScale);
+        if (UIsize.localScale.x < 15) {
+            Vector3 currentScale = UIsize.localScale;
+            currentScale = new Vector3(currentScale.x += .05f, currentScale.y += .05f, 1);
+            UIsize.localScale = currentScale;
+            Debug.Log(UIsize.localScale);
         }
     }
 
     public void darken() {
-        if (size.sizeDelta.x > 1) {
-
-            size.localScale = new Vector2(size.localScale.x -= .05, size.localScale.y -= .05, 1);
+        if (UIsize.localScale.x > 5) {
+            Vector3 currentScale = UIsize.localScale;
+            currentScale = new Vector3(currentScale.x -= .05f, currentScale.y -= .05f, 1);
+            UIsize.localScale = currentScale;
         }
     }
 

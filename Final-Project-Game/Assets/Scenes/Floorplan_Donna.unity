@@ -411,6 +411,21 @@ PrefabInstance:
       propertyPath: displayUIText
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1635857054982851249, guid: 6a0f28e7b92d741288c1b6cd60d21c42,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635857054982851249, guid: 6a0f28e7b92d741288c1b6cd60d21c42,
+        type: 3}
+      propertyPath: darkness
+      value: 
+      objectReference: {fileID: 1143592004}
+    - target: {fileID: 1635857054982851249, guid: 6a0f28e7b92d741288c1b6cd60d21c42,
+        type: 3}
+      propertyPath: turnsOffLights
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1878050507983705513, guid: 6a0f28e7b92d741288c1b6cd60d21c42,
         type: 3}
       propertyPath: m_Name
@@ -3081,9 +3096,10 @@ GameObject:
   - component: {fileID: 1143592007}
   - component: {fileID: 1143592006}
   - component: {fileID: 1143592008}
+  - component: {fileID: 1143592009}
   m_Layer: 5
-  m_Name: RawImage
-  m_TagString: Untagged
+  m_Name: Darkness
+  m_TagString: darkUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3154,6 +3170,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 976449878}
   playerPos: {x: 0, y: 0}
+--- !u!114 &1143592009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143592004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e225cd07282576479afe5127f8d4712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraObject: {fileID: 1329393170}
+  shakeLength: 5
+  shakeSize: 0.1
+  cameraOrigPos: {x: 0, y: 0, z: 0}
+  shake: 0
+  darkUI: {fileID: 1143592004}
+  c: {r: 0, g: 0, b: 0, a: 0}
+  startMaze: 0
+  endMaze: 0
+  visible: 1
+  lightOn: 1
 --- !u!1001 &1159495597
 PrefabInstance:
   m_ObjectHideFlags: 0

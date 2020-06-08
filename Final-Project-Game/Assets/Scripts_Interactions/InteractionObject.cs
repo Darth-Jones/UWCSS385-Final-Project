@@ -24,6 +24,7 @@ public class InteractionObject : MonoBehaviour
     public bool turnsOffLights = false;
     public bool turnsOnLights = false;
     public bool cameraShake = false;
+    public GameObject darkness;
 
     [Header("Requires Perquisite Event")]
     public bool requiresEventCheck = false;
@@ -89,12 +90,15 @@ public class InteractionObject : MonoBehaviour
 
                     if (turnsOnLights)
                         Debug.Log("Lights On");
+                        darkness.GetComponent<cameraShake>().lightOn = true;
 
                     if (turnsOffLights)
-                        Debug.Log("Lights On");
+                        Debug.Log("Lights Off");
+                        darkness.GetComponent<cameraShake>().lightOn = false;
 
                     if (cameraShake)
                         Debug.Log("Camera Shake");
+                        darkness.GetComponent<cameraShake>().shake = true;
 
                     interactedWith = true;
                 }
@@ -159,19 +163,21 @@ public class InteractionObject : MonoBehaviour
     //Displays Text on UI object 
     void DisplayUIText()
     {
-        interactionCanvas.GetComponent<InteractableCanvas>().TurnOnInteractibleCanvas(UIText);
+        //need to implement UI Object to display
         Debug.Log(UIText);
+        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
     }
 
     void DisplayAltUIText()
     {
+        //need to implement UI Object to display
         Debug.Log(UIText);
-        interactionCanvas.GetComponent<InteractableCanvas>().TurnOnInteractibleCanvas(UIText);
+        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
     }
 
     void RemoveUIText()
     {
-        interactionCanvas.GetComponent<InteractableCanvas>().TurnOffInteractibleCanvas();
+        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOff();
     }
 
     //Creates a new event for the objectives
