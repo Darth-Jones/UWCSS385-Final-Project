@@ -28,7 +28,6 @@ public class cameraShake : MonoBehaviour
     public int endMaze = 52;
     private bool shook = false;
     private RectTransform size; 
-    public GameObject[] waypoints;
     public bool visible = true;
 
     // Start is called before the first frame update
@@ -46,44 +45,11 @@ public class cameraShake : MonoBehaviour
         frameCounter = 0;
         c = image.color;
         c.a = 0;
-        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        // Testing purposes
-        if (Input.GetKeyDown(KeyCode.Z)) {
-            size.localScale = size.localScale * 2;
-        }
-        if (Input.GetKeyDown(KeyCode.X)) {
-            size.localScale = size.localScale * .5f;
-        }
-        if (Input.GetKeyDown(KeyCode.H)) {
-            if (visible) {
-                foreach (GameObject waypoint in waypoints)
-                {
-                    Renderer r = waypoint.GetComponent<Renderer>();
-                    Color newColor = r.material.color;
-                    newColor.a = 0;
-                    r.material.color = newColor;
-                    visible = false;
-                }
-            }
-            else {
-                foreach (GameObject waypoint in waypoints)
-                {
-                    Renderer r = waypoint.GetComponent<Renderer>();
-                    Color newColor = r.material.color;
-                    newColor.a = 1;
-                    r.material.color = newColor;
-                    visible = true;
-                }
-            }
-        }
-        
-
 
         if (cameraOrigPos.x > startMaze + 10) { shake = false;}
         cameraOrigPos = cameraScript.expectedPos;
@@ -136,5 +102,8 @@ public class cameraShake : MonoBehaviour
         
     }
 
+    public void lighten() {
+        if (size.sizeDelta < 5) size.sizeDelta += .05; 
+    }
 
 }

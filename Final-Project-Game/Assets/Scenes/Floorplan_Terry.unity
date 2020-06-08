@@ -1953,6 +1953,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2349103519283605588}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1329393176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329393170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e225cd07282576479afe5127f8d4712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraObject: {fileID: 1329393170}
+  shakeLength: 0
+  shakeSize: 0
+  cameraOrigPos: {x: 0, y: 0, z: 0}
+  shake: 0
+  darkUI: {fileID: 0}
+  c: {r: 0, g: 0, b: 0, a: 0}
+  startMaze: 1
+  endMaze: 52
+  waypoints: []
+  visible: 1
 --- !u!1 &1498017775
 GameObject:
   m_ObjectHideFlags: 0
