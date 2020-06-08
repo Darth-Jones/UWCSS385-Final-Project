@@ -522,85 +522,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6880546009073300695}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &494097759
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 494097760}
-  - component: {fileID: 494097761}
-  m_Layer: 0
-  m_Name: Enter-2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &494097760
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494097759}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -2.1, z: 0.6784041}
-  m_LocalScale: {x: 4, y: 4, z: 1}
-  m_Children: []
-  m_Father: {fileID: 570815953}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &494097761
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494097759}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1292539861
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06e55b8419d70564aadad86375d026be, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 6, y: 2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &495259640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -949,12 +870,6 @@ PrefabInstance:
 --- !u!1 &570815951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2719722499168072227, guid: c2d888641b7f6fc41a4a26044ab76644,
-    type: 3}
-  m_PrefabInstance: {fileID: 1747343537}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &570815953 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8128050036471617848, guid: c2d888641b7f6fc41a4a26044ab76644,
     type: 3}
   m_PrefabInstance: {fileID: 1747343537}
   m_PrefabAsset: {fileID: 0}
@@ -2404,6 +2319,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6581808325138395188, guid: c2d888641b7f6fc41a4a26044ab76644,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1292539861
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581808325138395188, guid: c2d888641b7f6fc41a4a26044ab76644,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7595794269239249496, guid: c2d888641b7f6fc41a4a26044ab76644,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8128050036471617848, guid: c2d888641b7f6fc41a4a26044ab76644,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2919,10 +2849,15 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8994596250203976568, guid: c2d888641b7f6fc41a4a26044ab76644,
+        type: 3}
+      propertyPath: fusebox
+      value: 
+      objectReference: {fileID: 570815951}
     - target: {fileID: 8994596250203976572, guid: c2d888641b7f6fc41a4a26044ab76644,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8994596250203976573, guid: c2d888641b7f6fc41a4a26044ab76644,
         type: 3}
