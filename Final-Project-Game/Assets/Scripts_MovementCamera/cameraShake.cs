@@ -92,14 +92,14 @@ public class cameraShake : MonoBehaviour
 
     public void lighten() {
         if (size.sizeDelta.x < 5) {
-            size.sizeDelta = new Vector2(size.sizeDelta.x += .05, size.sizeDelta.y += .05, 1);
+         //   size.sizeDelta = new Vector2(size.sizeDelta.x += .05, size.sizeDelta.y += .05, 1);
         }
     }
 
     public void darken() {
         if (size.sizeDelta.x > 1) {
 
-            size.localScale = new Vector2(size.localScale.x -= .05, size.localScale.y -= .05, 1);
+         //   size.localScale = new Vector2(size.localScale.x -= .05, size.localScale.y -= .05, 1);
         }
     }
 
