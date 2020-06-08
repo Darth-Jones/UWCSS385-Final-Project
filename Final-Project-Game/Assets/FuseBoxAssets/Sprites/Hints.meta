@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Final-Project-Game/Assets/FuseBoxAssets/Sprites/Hints.meta
 guid: e6c99475c3a594971934f77887b4a9bc
 =======
 guid: ccb67ac55933e45769d60bfe13944722
 >>>>>>> master:Final-Project-Game/Assets/Main_Menu_Assets.meta
+=======
+guid: e6c99475c3a594971934f77887b4a9bc
+>>>>>>> master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

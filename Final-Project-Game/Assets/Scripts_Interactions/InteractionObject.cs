@@ -159,21 +159,19 @@ public class InteractionObject : MonoBehaviour
     //Displays Text on UI object 
     void DisplayUIText()
     {
-        //need to implement UI Object to display
+        interactionCanvas.GetComponent<InteractableCanvas>().TurnOnInteractibleCanvas(UIText);
         Debug.Log(UIText);
-        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
     }
 
     void DisplayAltUIText()
     {
-        //need to implement UI Object to display
         Debug.Log(UIText);
-        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
+        interactionCanvas.GetComponent<InteractableCanvas>().TurnOnInteractibleCanvas(UIText);
     }
 
     void RemoveUIText()
     {
-        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOff();
+        interactionCanvas.GetComponent<InteractableCanvas>().TurnOffInteractibleCanvas();
     }
 
     //Creates a new event for the objectives

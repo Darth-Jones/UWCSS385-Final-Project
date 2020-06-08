@@ -20,7 +20,7 @@ public class EmailButton : MonoBehaviour
         email = newEmail;
 
         Debug.Log("creating email:" + newEmail.hintText);
-        this.headerText.text = newEmail.headerText;
+        this.headerText.text = "NEW\n" + newEmail.headerText;
     }
     
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class EmailButton : MonoBehaviour
             eventLog.GetComponent<EventLog>().newHintText(hintText);
             menuButton.GetComponent<MenuButtonController>().newEventText();
         }
-
+        this.headerText.text = email.headerText;
         bodyCanvas.GetComponentInChildren<Text>().text = email.bodyText;
     }
 }
