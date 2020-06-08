@@ -51,8 +51,8 @@ public class cameraShake : MonoBehaviour
     void Update()
     {
 
-        if (cameraOrigPos.x > startMaze + 10) { shake = false;}
         cameraOrigPos = cameraScript.expectedPos;
+
         frameCounter++;
         if(shake) {
             startShake = frameCounter;
@@ -60,13 +60,10 @@ public class cameraShake : MonoBehaviour
             j = 60;
             
             endShake = startShake + 120 + shakeLength * 60;
+            shake = false;
         }
         if (frameCounter < endShake && startShake < frameCounter) {
             i++;
-            if (c.a < 1) {c.a = c.a + .005f;}
-            image.color =  c;
-            cameraScript.rubberBandNess = 1.5f;
-            if (!shook) {
                 if ( i < 60) {
                     
                     float xMovement = Random.Range(-shakeSize * i/60, shakeSize * i/60);
@@ -85,25 +82,25 @@ public class cameraShake : MonoBehaviour
                     j--;
                     
                 }
-                if (frameCounter == endShake - 1) shook = true;
-            }
+            
             
         }
-        if (cameraOrigPos.x < startMaze || cameraOrigPos.x > endMaze) {
-            shake = true;
-            if (c.a > 0) { c.a -= .005f; }
-            image.color = c;
-        }
-        Debug.Log("StartShake = " + startShake + " EndShake = " + endShake + " frameCounter = " + frameCounter + " i = " + i + " j = " + j);
-        
-        //lastShake = shake;
 
-        
+        Debug.Log("StartShake = " + startShake + " EndShake = " + endShake + " frameCounter = " + frameCounter + " i = " + i + " j = " + j);
         
     }
 
     public void lighten() {
-        if (size.sizeDelta < 5) size.sizeDelta += .05; 
+        if (size.sizeDelta.x < 5) {
+            size.sizeDelta = new Vector2(size.sizeDelta.x += .05, size.sizeDelta.y += .05, 1);
+        }
+    }
+
+    public void darken() {
+        if (size.sizeDelta.x > 1) {
+
+            size.localScale = new Vector2(size.localScale.x -= .05, size.localScale.y -= .05, 1);
+        }
     }
 
 }
