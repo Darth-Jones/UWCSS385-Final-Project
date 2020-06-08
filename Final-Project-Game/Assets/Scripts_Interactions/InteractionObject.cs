@@ -7,6 +7,7 @@ public class InteractionObject : MonoBehaviour
     [Header("Object Connections")]
     public GameObject interactable;
     public GameObject emailSystem;
+    public GameObject interactionCanvas;
 
     [Header("Interaction Options")]
     public bool displayObjectOnClick = false;
@@ -131,12 +132,16 @@ public class InteractionObject : MonoBehaviour
     {
         //need to implement UI Object to display
         //Debug.Log(UIText);
-        emailSystem.GetComponent<EventLog>().TurnOnInteractibleCanvas(UIText);
+       // emailSystem.GetComponent<EventLog>().TurnOnInteractibleCanvas(UIText);
+
+        interactionCanvas.GetComponent<InteractableCanvas>().TurnOnInteractibleCanvas(UIText);
     }
 
     void RemoveUIText()
     {
-        emailSystem.GetComponent<EventLog>().TurnOffInteractibleCanvas();
+       // emailSystem.GetComponent<EventLog>().TurnOffInteractibleCanvas();
+
+        interactionCanvas.GetComponent<InteractableCanvas>().TurnOffInteractibleCanvas();
     }
 
     //Creates a new event for the objectives

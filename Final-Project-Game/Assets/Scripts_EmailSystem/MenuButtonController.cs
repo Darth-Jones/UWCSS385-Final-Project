@@ -27,6 +27,6 @@ public class MenuButtonController : MonoBehaviour
     public void newEventText()
     {
         Debug.Log("menu button new event");
-        buttonText.text = "Menu\nNew Hint";
+        buttonText.text = "Menu\nNew Objective";
     }
 }

@@ -11,6 +11,6 @@ public class CheckPointCanvasController : MonoBehaviour
 
     public void newText(string text)
     {
-        checkPointText.text += text + "\n";
+        checkPointText.text = "\t\u2022 " + text + "\n" + checkPointText.text;
     }
 }
