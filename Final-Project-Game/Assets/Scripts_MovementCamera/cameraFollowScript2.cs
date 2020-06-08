@@ -34,13 +34,15 @@ public class cameraFollowScript2 : MonoBehaviour
         playerPos = playerMovement.currentPos;
         
         rb2d.velocity = new Vector2(-((transform.position.x - playerPos.x) * rubberBandNess), -((transform.position.y - playerPos.y) * rubberBandNess)); 
-        expectedPos = new Vector2(transform.position.x + rb2d.velocity.x , (transform.position.y + rb2d.velocity.y));    
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        expectedPos = new Vector2(transform.position.x + rb2d.velocity.x , (transform.position.y + rb2d.velocity.y));  
+
+        if (Input.GetKeyDown(KeyCode.Z) & size < 10) {
             size = size + 1;
         }
-        if (Input.GetKeyDown(KeyCode.X)) {
+        if (Input.GetKeyDown(KeyCode.X) & size > 2 ){
             size = size - 1;
         }
+
         cam.orthographicSize = size;
         //Debug.Log(transform.position);
     }
