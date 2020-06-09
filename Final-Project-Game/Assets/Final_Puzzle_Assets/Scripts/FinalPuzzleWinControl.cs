@@ -20,6 +20,7 @@ public class FinalPuzzleWinControl : MonoBehaviour
     public SpriteRenderer sr;
     public Sprite errorFlash;
     public GameObject errorMessage;
+    public ButtonSelected buttonSelected;
 
 
 
@@ -54,6 +55,7 @@ public class FinalPuzzleWinControl : MonoBehaviour
                     Debug.Log("Not Solved");
                     errorMessage.SetActive(true);
                     Invoke("HideErrorMessage", 2);
+                    buttonSelected.GetComponent<ButtonSelected>().OnSubmit();
                 }
                 enteredSequence = new List<int>();
             }

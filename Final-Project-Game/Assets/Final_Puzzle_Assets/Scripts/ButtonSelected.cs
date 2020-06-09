@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonPress : MonoBehaviour
+public class ButtonSelected : MonoBehaviour
 {
     private SpriteRenderer sr;
     private Sprite OGSprite;
@@ -13,22 +13,21 @@ public class ButtonPress : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         OGSprite = sr.sprite;
-        
+
     }
 
     public void OnMouseDown()
     {
         if (Input.GetMouseButtonDown(0))
         {
-                sr.sprite = newSprite;
-           
+            sr.sprite = newSprite;
+
         }
     }
 
-    public void OnMouseUp()
+    public void OnSubmit()
     {
-        if (Input.GetMouseButtonUp(0)) {
-            sr.sprite = OGSprite;
-        }
+        sr.sprite = OGSprite;
     }
 }
+
