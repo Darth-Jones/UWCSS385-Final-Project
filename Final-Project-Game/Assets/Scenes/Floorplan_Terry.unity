@@ -2527,6 +2527,11 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.54
       objectReference: {fileID: 0}
+    - target: {fileID: 7672233919767799222, guid: 4aced993e7ababf4bbe47372e751ca23,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7672233918672112605, guid: 4aced993e7ababf4bbe47372e751ca23, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4aced993e7ababf4bbe47372e751ca23, type: 3}
@@ -3142,7 +3147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce2f9e71f1a2d34b8c29fd826d7949a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 940060358}
   playerPos: {x: 0, y: 0}
 --- !u!50 &1376454262
 Rigidbody2D:
@@ -6578,6 +6583,16 @@ PrefabInstance:
       propertyPath: numberStrings.Array.data[0]
       value: 2938457
       objectReference: {fileID: 0}
+    - target: {fileID: 3820702000676197692, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820702000733377973, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3820702000889084418, guid: f8cd73984bbdc1145b31c613c8f783a9,
         type: 3}
       propertyPath: camera
@@ -6593,6 +6608,16 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1329393170}
+    - target: {fileID: 3820702000990335108, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820702001228005330, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3820702001295368892, guid: f8cd73984bbdc1145b31c613c8f783a9,
         type: 3}
       propertyPath: camera
@@ -6603,6 +6628,16 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1329393170}
+    - target: {fileID: 3820702001384593525, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820702001539194966, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3820702001761585215, guid: f8cd73984bbdc1145b31c613c8f783a9,
         type: 3}
       propertyPath: camera
@@ -6613,11 +6648,31 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1329393170}
+    - target: {fileID: 3820702001876019795, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3820702001925795736, guid: f8cd73984bbdc1145b31c613c8f783a9,
         type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 1329393170}
+    - target: {fileID: 3820702002127385334, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820702002232787811, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820702002256980552, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3820702002424291534, guid: f8cd73984bbdc1145b31c613c8f783a9,
         type: 3}
       propertyPath: camera
@@ -6628,6 +6683,11 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1329393170}
+    - target: {fileID: 3820702002629345787, guid: f8cd73984bbdc1145b31c613c8f783a9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3820702002655970815, guid: f8cd73984bbdc1145b31c613c8f783a9,
         type: 3}
       propertyPath: camera
