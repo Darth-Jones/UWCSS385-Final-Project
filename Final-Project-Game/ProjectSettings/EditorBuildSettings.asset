@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Email_System_Test_Scene.unity
-    guid: a4a7836279e4ca145ba6ea4fb92cc4d5
-  - enabled: 0
-    path: Assets/Scenes/Level_Terry.unity
-    guid: edb7404019ced4044a5e0da547158ada
+  - enabled: 1
+    path: Assets/Scenes/0_Main_Menu.unity
+    guid: dc693d26c4a9d4c63a330f0631b9bf10
+  - enabled: 1
+    path: Assets/Scenes/1_Terry_Load.unity
+    guid: 86429c9abe1d8450bb9bba7e5064c135
+  - enabled: 1
+    path: Assets/Scenes/2_Donna_Load.unity
+    guid: 29357d4812bc74af0ab9563b18bb95a9
+  - enabled: 1
+    path: Assets/Scenes/Floorplan_Terry.unity
+    guid: 9435310378ef3f34f97a1329015d16a3
   - enabled: 1
     path: Assets/Scenes/Floorplan_Donna.unity
     guid: 00fc4277ba1baef4b835b821ee76f0f7
-  - enabled: 0
-    path: Assets/Scenes/Floorplan_Terry.unity
-    guid: 9435310378ef3f34f97a1329015d16a3
   m_configObjects: {}
