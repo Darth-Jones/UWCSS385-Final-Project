@@ -19,15 +19,19 @@ public class KeypadSystem : MonoBehaviour
     public GameObject camera;
     public Transform cameraTransform;
     public bool transfer;
-    public int step = 0;
     public GameObject interactionObject;
     public InteractionObject interactionObjectScript;
-    public int[] itemGatheredEventID;
-    public int[] receivedEventID;
-    public int[] emailIDs;
-    public string[] emailHeaders;
-    public string[] emailBody;
-    public string[] emailHint;
+    public int itemGatheredEventID;
+    public int itemGatheredEmailID;
+    public string itemGatheredEmailHeader;
+    public string itemGatheredEmailBody;
+    public string itemGatheredEmailHint;
+    public int receivedEventID;
+    public int receivedEmailID;
+    public string receivedEmailHeader;
+    public string receivedEmailBody;
+    public string[] receivedEventHints;
+    public string receivedEmailHint;
     public GameObject[] incorrect;
 
     // Start is called before the first frame update
@@ -48,10 +52,7 @@ public class KeypadSystem : MonoBehaviour
         numSprites =  Resources.LoadAll<Sprite>("Keypad_System_Assets/Display_Numbers");
         doorScript = door.GetComponent<DoorScript>();
         cameraTransform = camera.GetComponent<Transform>();
-        if (transfer)
-        {
-            interactionObjectScript = interactionObject.GetComponent<InteractionObject>();
-        }
+        interactionObjectScript =  interactionObject.GetComponent<InteractionObject>();
         incorrect = GameObject.FindGameObjectsWithTag("incorrect");
 
     }
@@ -114,19 +115,22 @@ public class KeypadSystem : MonoBehaviour
     public void EnterKeyPressed()
     {
         if(transfer) {
-            int i = 0;
-            foreach(int eventID in itemGatheredEventID) {
-                if(interactionObjectScript.emailSystem.GetComponent<EventLog>().isComplete(eventID)) {
+            if(interactionObjectScript.emailSystem.GetComponent<EventLog>().isComplete(itemGatheredEventID)) {
 
-                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEvent();
-                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().CompleteEvent();
-                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(receivedEventID, step);
-                    interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEmail(emailIDs[i], emailHeaders[i], emailBody[i], emailHint[i]);
-
-                    break;
-                }
+                //interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEvent();
+                //interactionObjectScript.emailSystem.GetComponent<EventLog>().CompleteEvent();
+                //interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(receivedEventID, step);
+                interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEmail(itemGatheredEmailID, itemGatheredEmailHeader, itemGatheredEmailBody, itemGatheredEmailHint);
             }
-
+            else {
+                numbers = new int[maxNumbers];
+                numberLocation = 0;
+                for(int i = 0; i < maxNumbers; i++) {
+                    numberToDisplay[i].sprite = numSprites[11];
+                }
+                numberToDisplay[maxNumbers/2].sprite = numSprites[10];
+                Debug.Log("Incorrect");
+            }
         }
         else{
             bool correct = true;
@@ -170,38 +174,31 @@ public class KeypadSystem : MonoBehaviour
         
         if(doorScript != null) {
             Debug.Log("Running");
-            bool anycorrect = false;
-            for(step = 0; step < interactionObjectScript.stepCount; step++) {
-                int i = 0;
-                bool correct = true;
-                Debug.Log("Outer loop");
-                foreach(int number in numbers) {
-                    Debug.Log("Inner Loop)");
-                    Debug.Log(doorScript.keyCode[step, i]);
-                    if (number != doorScript.keyCode[step, i]) {
-                        correct = false;
-                    }
-                    i++;
+            int i = 0;
+            bool correct = true;
+            Debug.Log("Outer loop");
+            foreach(int number in numbers) {
+                if (number != doorScript.keyCode[0, i]) {
+                    correct = false;
                 }
-                int j = 0;
-                if (correct) {
-                    //interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(interactionObjectScript.eventID, step);
-                    interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEvent(receivedEventID[j], 1, emailHint);
-                    interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEmail(emailIDs[j], emailHeaders[j], emailBody[j], emailHint[j]);
-                    //Perform step in interaction
-                    Debug.Log("Good Code, Step = " + step);
-                    anycorrect = true;
-                }
+                i++;
             }
-            if (!anycorrect) {
-                    numbers = new int[maxNumbers];
-                    numberLocation = 0;
-                    for(int i = 0; i < maxNumbers; i++) {
-                        numberToDisplay[i].sprite = numSprites[11];
-                    }
-                    numberToDisplay[maxNumbers/2].sprite = numSprites[10];
-                    Debug.Log("Incorrect");
+            if (correct) {
+                
+                interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEvent(receivedEventID, 1, receivedEventHints);
+                interactionObjectScript.emailSystem.GetComponent<EventLog>().CreateEmail(receivedEmailID, receivedEmailHeader, receivedEmailBody, receivedEmailHint);
+                interactionObjectScript.emailSystem.GetComponent<EventLog>().StepCompleted(receivedEventID, 0);
+                //Perform step in interaction
+            }
+            if (!correct) {
+                numbers = new int[maxNumbers];
+                numberLocation = 0;
+                for(int j = 0; j < maxNumbers; j++) {
+                    numberToDisplay[j].sprite = numSprites[11];
                 }
+                numberToDisplay[maxNumbers/2].sprite = numSprites[10];
+                Debug.Log("Incorrect");
             }
         }
     }
+}
