@@ -46,9 +46,9 @@ public class FinalPuzzleWinControl : MonoBehaviour
                     winningSequence6.SequenceEqual(enteredSequence))
                 {
                     Debug.Log("SOLVED");
-                    //called = true;
-                    //emailSystem.GetComponent<EventLog>().CreateEvent(eventID, 1, hintText); //using event 10
-                    //emailSystem.GetComponent<EventLog>().StepCompleted(eventID, 0);
+                    called = true;
+                    emailSystem.GetComponent<EventLog>().CreateEvent(eventID, 1, hintText); //using event 10
+                    emailSystem.GetComponent<EventLog>().StepCompleted(eventID, 0);
                 }
                 else {
                     Debug.Log("Not Solved");
