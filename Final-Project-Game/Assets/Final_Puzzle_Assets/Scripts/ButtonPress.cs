@@ -5,14 +5,15 @@ using UnityEngine;
 public class ButtonPress : MonoBehaviour
 {
     private SpriteRenderer sr;
-    private Color OGColor;
-    public Color changeColor;
+    private Sprite OGSprite;
+    public Sprite newSprite;
     private bool buttonPressed = false;
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        OGSprite = sr.sprite;
         
     }
 
@@ -22,21 +23,16 @@ public class ButtonPress : MonoBehaviour
         {
             if (!buttonPressed)
             {
-                sr.material.color = changeColor;
-                buttonPressed = true;
-            }
-            else {
-                Invoke("ChangeColorBack", 0.1f);
+                sr.sprite = newSprite;
             }
            
         }
     }
 
-    private void ChangeColorBack()
+    public void OnMouseUp()
     {
-
-            sr.material.color = OGColor;
-            buttonPressed = false;
-
+        if (Input.GetMouseButtonUp(0)) {
+            sr.sprite = OGSprite;
+        }
     }
 }
