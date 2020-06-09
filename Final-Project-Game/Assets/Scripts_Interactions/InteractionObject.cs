@@ -8,7 +8,6 @@ public class InteractionObject : MonoBehaviour
     public GameObject interactable;
     public GameObject emailSystem;
 
-
     [Header("Interaction Options")]
     public bool displayObjectOnClick = false;
     public bool removeObjectOnClick = false;

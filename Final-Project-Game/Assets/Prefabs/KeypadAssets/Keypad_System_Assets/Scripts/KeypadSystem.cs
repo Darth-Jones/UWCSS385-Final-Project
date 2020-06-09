@@ -52,7 +52,10 @@ public class KeypadSystem : MonoBehaviour
         numSprites =  Resources.LoadAll<Sprite>("Keypad_System_Assets/Display_Numbers");
         doorScript = door.GetComponent<DoorScript>();
         cameraTransform = camera.GetComponent<Transform>();
-        interactionObjectScript =  interactionObject.GetComponent<InteractionObject>();
+        if (transfer)
+        {
+            interactionObjectScript = interactionObject.GetComponent<InteractionObject>();
+        }  
         incorrect = GameObject.FindGameObjectsWithTag("incorrect");
 
     }
