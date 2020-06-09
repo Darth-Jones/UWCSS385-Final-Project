@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractionObject : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class InteractionObject : MonoBehaviour
     public string UIAltText;
     public bool interactOnTouch = false;
     public bool repeatInteraction = false;
+
+    [Header("Win Condition")]
+    public bool winConditon = false;
+    public string levelName;
 
     [Header("Enviroment Effects")]
     public bool turnsOffLights = false;
@@ -94,6 +99,9 @@ public class InteractionObject : MonoBehaviour
 
                     if (creatEvent)
                         CreateEvent();
+
+                    if (winConditon)
+                        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
 
                     if (turnsOnLights)
                         darkness.GetComponent<cameraShake>().lightOn = true;
