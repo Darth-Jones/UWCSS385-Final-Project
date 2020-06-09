@@ -9,13 +9,6 @@ public class FuseBoxWinControl : MonoBehaviour
     public string[] hintText = { "Item transfer system beeped: it's now up and running" };
     public int eventID;
     private bool called = false;
-    public GameObject camera;
-    private Transform cameraTransform;
-    // Start is called before the first frame update
-    void Start()
-    {
-        cameraTransform = camera.GetComponent<Transform>();
-    }
 
     // Update is called once per frame
     void Update()

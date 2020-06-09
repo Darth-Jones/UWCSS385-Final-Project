@@ -7,7 +7,7 @@ public class InteractionObject : MonoBehaviour
     [Header("Object Connections")]
     public GameObject interactable;
     public GameObject emailSystem;
-    public GameObject interactionCanvas;
+
 
     [Header("Interaction Options")]
     public bool displayObjectOnClick = false;
@@ -52,7 +52,15 @@ public class InteractionObject : MonoBehaviour
     private bool interactedWith = false;
     private bool interactionRemoved = false;
     private bool firstClick = true;
+    private GameObject interactionCanvas;
+    private InteractableCanvas interactionText;
 
+    private void Start()
+    {
+        emailSystem = GameObject.FindGameObjectWithTag("emailSystem");
+        GameObject interactionCanvas = GameObject.FindGameObjectWithTag("interactionTextField");
+        interactionText = interactionCanvas.GetComponent<InteractableCanvas>();
+    }
 
     //Determines type of trigger by using string
     //Trigger Types: enter, exit, and click
@@ -89,15 +97,12 @@ public class InteractionObject : MonoBehaviour
                         CreateEvent();
 
                     if (turnsOnLights)
-                        Debug.Log("Lights On");
                         darkness.GetComponent<cameraShake>().lightOn = true;
 
                     if (turnsOffLights)
-                        Debug.Log("Lights Off");
                         darkness.GetComponent<cameraShake>().lightOn = false;
 
-                    if (cameraShake)
-                        Debug.Log("Camera Shake");
+                    if (cameraShake)  
                         darkness.GetComponent<cameraShake>().shake = true;
 
                     interactedWith = true;
@@ -165,19 +170,19 @@ public class InteractionObject : MonoBehaviour
     {
         //need to implement UI Object to display
         Debug.Log(UIText);
-        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
+        interactionText.TurnOnInteractibleCanvas(UIText);
     }
 
     void DisplayAltUIText()
     {
         //need to implement UI Object to display
-        Debug.Log(UIText);
-        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOn(displayUIText);
+        Debug.Log(UIAltText);
+        interactionText.TurnOnInteractibleCanvas(UIAltText);
     }
 
     void RemoveUIText()
     {
-        //interactionCanvas.GetComponent<InteractionCanvasController>().TurnOff();
+        interactionText.TurnOffInteractibleCanvas();
     }
 
     //Creates a new event for the objectives

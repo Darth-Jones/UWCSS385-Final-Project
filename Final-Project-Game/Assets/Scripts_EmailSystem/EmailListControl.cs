@@ -21,7 +21,7 @@ public class EmailListControl : MonoBehaviour
     private void Start()
     {
         //  emailList = new List<Email>();
-        GenStartingEmails();
+        //GenStartingEmails();
     }
 
     private void GenStartingEmails()
