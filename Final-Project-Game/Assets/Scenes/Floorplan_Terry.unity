@@ -417,7 +417,7 @@ PrefabInstance:
     - target: {fileID: 1878050507983705513, guid: 6a0f28e7b92d741288c1b6cd60d21c42,
         type: 3}
       propertyPath: m_Name
-      value: Anitigen_Formula
+      value: Antigen_Formula
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a0f28e7b92d741288c1b6cd60d21c42, type: 3}
@@ -2459,7 +2459,7 @@ PrefabInstance:
     - target: {fileID: 7672233919471613436, guid: 4aced993e7ababf4bbe47372e751ca23,
         type: 3}
       propertyPath: itemGatheredEmailHint
-      value: I sent the Vaccine to Donna.
+      value: 'Receive Code: 3949287 I sent the Vaccine to Donna.'
       objectReference: {fileID: 0}
     - target: {fileID: 7672233919471613438, guid: 4aced993e7ababf4bbe47372e751ca23,
         type: 3}
