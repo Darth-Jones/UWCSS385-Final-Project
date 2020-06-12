@@ -2453,7 +2453,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemGatheredEmailBody
       value: 'Transfer system: You have successfully sent one item. Receive Code:
-        394928.  If this was in error please do not reply to this message, this is
+        3949287.  If this was in error please do not reply to this message, this is
         an automated response. Please seek station technical support.'
       objectReference: {fileID: 0}
     - target: {fileID: 7672233919471613436, guid: 4aced993e7ababf4bbe47372e751ca23,

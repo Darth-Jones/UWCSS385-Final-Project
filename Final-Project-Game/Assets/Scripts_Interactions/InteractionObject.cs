@@ -143,6 +143,7 @@ public class InteractionObject : MonoBehaviour
                 if (displayObjectOnClick && firstClick)
                 {
                     DisplayObject();
+                    RemoveUIText();
                     firstClick = false;
                 } else if (displayObjectOnClick && !firstClick)
                 {
